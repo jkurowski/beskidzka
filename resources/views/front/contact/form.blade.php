@@ -1,80 +1,85 @@
-<div class="container">
-    <div class="section-header text-center">
-        <p class="section-header__subtitle">Kontakt z nami</p>
-        <h1 class="section-header__title">Formularz kontaktowy</h1>
-    </div>
+<form id="contact-form" autocomplete="off" class="p-3 p-lg-30 validateForm">
+    {{ csrf_field() }}
     <div class="row">
-        <div class="col-11 col-xxl-10 mx-auto cta__box">
-            <img src="{{ asset('images/tlo-cta.jpg') }}" alt="budynek" class="cta__img-bg" width="295" height="510" loading="lazy">
-            <img src="{{ asset('images/kobieta-cta.png') }}" alt="kobieta" class="cta__img" width="428" height="627" loading="lazy">
-            <div class="row">
-                <div class="col-xl-7">
-                    @if (session('success'))
-                        <div class="alert alert-success border-0">
-                            {{ session('success') }}
-                        </div>
-                    @endif
-                    @if (session('warning'))
-                        <div class="alert alert-warning border-0">
-                            {{ session('warning') }}
-                        </div>
-                    @endif
-                    <form method="post" action="" class="contact-form validateForm" id="contact-form">
-                        {{ csrf_field() }}
-                        <div class="box-anim mb-3">
-                            <label for="name" class="lab-anim">Imię i Nazwisko / Nazwa firmy</label>
-                            <input name="form_name" type="text" class="form-control validate[required] @error('form_name') is-invalid @enderror" id="name" value="{{ old('form_name') }}">
-                            @error('form_name')
-                            <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
-                            @enderror
-                        </div>
-                        <div class="row mb-3">
-                            <div class="col box-anim">
-                                <label for="phone" class="lab-anim">Telefon</label>
-                                <input name="form_phone" type="tel" class="form-control validate[required] @error('form_phone') is-invalid @enderror" id="phone" value="{{ old('form_phone') }}">
-                                @error('form_phone')
-                                <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
-                                @enderror
-                            </div>
-                            <div class="col box-anim">
-                                <label for="email" class="lab-anim">Adres e-mail</label>
-                                <input name="form_email" type="email" class="form-control validate[required] @error('form_email') is-invalid @enderror" id="email" value="{{ old('form_email') }}">
-                                @error('form_email')
-                                <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
-                                @enderror
-                            </div>
-                        </div>
-                        <div class="mb-4 box-anim">
-                            <label for="message" class="lab-anim">Wiadomość</label>
-                            <textarea name="form_message" id="message" class="form-control validate[required] @error('form_message') is-invalid @enderror" rows="2" maxlength="3000" required>{{ old('form_message') }}</textarea>
-                            @error('form_message')
-                            <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
-                            @enderror
-                        </div>
-
-                        @foreach ($rules as $r)
-                            <div class="mb-3 form-check position-relative @error('rule_'.$r->id) is-invalid @enderror">
-                                <input name="rule_{{$r->id}}" type="checkbox" class="form-check-input @if($r->required === 1) validate[required] @endif" id="rule_{{$r->id}}">
-                                <label class="form-check-label form-check-label--check" for="rule_{{$r->id}}">{!! $r->text !!}</label>
-                                @error('rule_'.$r->id)
-                                <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
-                                @enderror
-                            </div>
-                        @endforeach
-                        <div class="text-center text-sm-end">
-                            <input type="hidden" name="page_name" value="{{ $page_name }}">
-                            <script type="text/javascript">
-                                document.write("<button type=\"submit\" class=\"g-recaptcha project-btn project-btn--gray\" data-sitekey=\"{{ config('services.recaptcha_v3.siteKey') }}\" data-callback=\"onRecaptchaSuccess\" data-action=\"submitContact\">Wyślij</button>");
-                            </script>
-                            <noscript>Do poprawnego działania, Java musi być włączona.</noscript>
-                        </div>
-                    </form>
+        <div class="col-12">
+            @if (session('success'))
+                <div class="alert alert-success border-0">
+                    {{ session('success') }}
                 </div>
+            @endif
+            @if (session('warning'))
+                <div class="alert alert-warning border-0">
+                    {{ session('warning') }}
+                </div>
+            @endif
+        </div>
+        <div class="col-12">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control validate[required] @error('form_name') is-invalid @enderror" value="{{ old('form_name') }}" id="user-name" placeholder="Imię i nazwisko" name="form_name" />
+                <label for="user-name">Imię i nazwisko</label>
+                @error('form_name')
+                <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
+                @enderror
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-12 col-lg-6">
+            <div class="form-floating mb-3">
+                <input type="tel" class="form-control validate[required] @error('form_phone') is-invalid @enderror" value="{{ old('form_phone') }}" id="user-tel" placeholder="Telefon" name="form_phone" />
+                <label for="user-tel">Telefon</label>
+                @error('form_phone')
+                <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
+                @enderror
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-12 col-lg-6">
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control validate[required] @error('form_email') is-invalid @enderror" id="user-email" placeholder="Adres e-mail" name="form_email" required="" value="{{ old('form_email') }}" />
+                <label for="user-email">Adres e-mail</label>
+                @error('form_email')
+                <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
+                @enderror
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="form-floating">
+                <textarea class="form-control validate[required] @error('form_message') is-invalid @enderror" placeholder="Wiadomość" id="user-message" style="height: 100px" name="form_message">{{ old('form_message') }}</textarea>
+                <label for="user-message">Wiadomość</label>
+                @error('form_message')
+                <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
+                @enderror
             </div>
         </div>
     </div>
-</div>
+    <div class="col-12">
+        @foreach ($rules as $r)
+            <div class="form-check text-start pt-3 @error('rule_'.$r->id) is-invalid @enderror">
+                <input name="rule_{{$r->id}}" type="checkbox" class="form-check-input @if($r->required === 1) validate[required] @endif" id="rule_{{$r->id}}" data-prompt-position="topLeft:-20px">
+                <label class="form-check-label form-check-label--check small fw-medium" for="rule_{{$r->id}}">{!! $r->text !!}</label>
+                @error('rule_'.$r->id)
+                <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
+                @enderror
+            </div>
+        @endforeach
+
+
+        <div class="form-check text-start pt-3">
+            <input class="form-check-input" type="checkbox" value="" id="terms-check" name="terms" />
+            <label class="form-check-label small fw-medium" for="terms-check">
+                Akceptuję <a class="link-hover-primary text-decoration-underline" href="/polityka-prywatnosci/">politykę prywatności.</a><span class="text-primary">*</span>
+            </label>
+        </div>
+    </div>
+    <div class="col-12 text-end">
+        <input type="hidden" name="page_name" value="{{ $page_name }}">
+        <script type="text/javascript">
+            document.write("<button type=\"submit\" class=\"g-recaptcha btn btn-primary px-30\" data-sitekey=\"{{ config('services.recaptcha_v3.siteKey') }}\" data-callback=\"onRecaptchaSuccess\" data-action=\"submitContact\">WYŚLIJ</button>");
+        </script>
+        <noscript>Do poprawnego działania, Java musi być włączona.</noscript>
+    </div>
+</form>
 @push('scripts')
+    <script src="{{ asset('css/form.css') }}" charset="utf-8"></script>
     <script src="{{ asset('js/validation.js') }}" charset="utf-8"></script>
     <script src="{{ asset('js/pl.js') }}" charset="utf-8"></script>
     <script src="https://www.google.com/recaptcha/api.js"></script>
@@ -83,9 +88,9 @@
         $(document).ready(function(){
             $(".validateForm").validationEngine({
                 validateNonVisibleFields: true,
-                updatePromptsPosition:true,
-                promptPosition : "topRight:-137px",
-                autoPositionUpdate: false
+                updatePromptsPosition: true,
+                promptPosition : "topLeft:0",
+                autoPositionUpdate: true
             });
         });
 

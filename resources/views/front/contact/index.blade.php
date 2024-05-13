@@ -121,59 +121,7 @@
                     <div class="col-12 col-md-6 col-lg-9">
                         <div class="d-flex bg-white align-items-center">
                             <div class="col-12 col-lg-8 col-xl-9">
-                                <form id="contact-form" autocomplete="off" class="p-3 p-lg-30">
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div id="form-errors" class="alert-danger alert hide-empty"></div>
-                                            <div id="form-success" class="alert-success alert hide-empty"></div>
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="form-floating mb-3">
-                                                <input type="text" class="form-control" id="user-name" placeholder="Imię i nazwisko"
-                                                       name="username" />
-                                                <label for="user-name">Imię i nazwisko</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                                            <div class="form-floating mb-3">
-                                                <input type="tel" class="form-control" id="user-tel" placeholder="Telefon" name="tel" />
-                                                <label for="user-tel">Telefon</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                                            <div class="form-floating mb-3">
-                                                <input type="email" class="form-control" id="user-email" placeholder="Adres e-mail" name="email"
-                                                       required="" />
-                                                <label for="user-email">Adres e-mail</label>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-12">
-                                            <div class="form-floating">
-                        <textarea class="form-control" placeholder="Wiadomość" id="user-message" style="height: 100px"
-                                  name="message"></textarea>
-                                                <label for="user-message">Wiadomość</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-check text-start pt-3">
-                                            <input class="form-check-input" type="checkbox" value="" id="terms-check" name="terms" />
-                                            <label class="form-check-label small fw-medium" for="terms-check">
-                                                Akceptuję
-                                                <a class="link-hover-primary text-decoration-underline"
-                                                   href="/polityka-prywatnosci/">politykę
-                                                    prywatności.</a>
-                                                <span class="text-primary">*</span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 text-end">
-                                        <button data-btn-submit type="submit" class="btn btn-primary px-30" disabled>
-                                            WYŚLIJ
-                                        </button>
-                                    </div>
-                                </form>
+                                @include('front.contact.form', [ 'page_name' => 'Kontakt'])
                             </div>
                             <div class="d-none d-lg-block col-lg-4 col-xl-3 position-relative">
                                 <div class="w-100 h-100">
@@ -192,17 +140,3 @@
         </section>
     </main>
 @endsection
-@push('scripts')
-    <script type="text/javascript">
-        const map = L.map('map').setView([52.124160, 20.668000], 14);
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-            subdomains: 'abcd',
-            maxZoom: 20
-        }).addTo(map);
-
-        L.marker([52.124160, 20.668000]).addTo(map)
-            .bindPopup('<img src="{{ asset('images/logo-dark.svg') }}" width="73" height="27" alt="logo" class="mb-2"> <br> Przeskok 6 <br> 05-822 Milanówek')
-            .openPopup();
-    </script>
-@endpush

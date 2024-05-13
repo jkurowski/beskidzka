@@ -35,10 +35,6 @@
 
 @include('layouts.partials.cookies')
 
-@auth
-    @include('layouts.partials.inline')
-@endauth
-
 <!-- Styles -->
 <link href="{{ asset('/css/bootstrap.min.css') }}" rel="stylesheet">
 <link href="{{ asset('/css/style.css') }}" rel="stylesheet">
@@ -55,8 +51,7 @@
 <script src="{{ asset('/js/aos.js') }}" charset="utf-8"></script>
 <script src="{{ asset('/js/main.js') }}" charset="utf-8"></script>
 
-<script src="{{ asset('js/validation.js') }}" charset="utf-8"></script>
-<script src="{{ asset('js/pl.js') }}" charset="utf-8"></script>
+@stack('scripts')
 
 @if(settings()->get("popup_status") == 1)
     <div class="modal" tabindex="-1" id="popModal">
@@ -74,13 +69,6 @@
 @endif
 <script type="text/javascript">
     $(document).ready(function(){
-
-        $(".validateForm").validationEngine({
-            validateNonVisibleFields: true,
-            updatePromptsPosition:true,
-            promptPosition : "topRight:-137px"
-        });
-
         @if(settings()->get("popup_status") == 1)
             const popModal = new bootstrap.Modal(document.getElementById('popModal'), {
                 keyboard: false

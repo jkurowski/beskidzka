@@ -28,7 +28,7 @@
     @stack('style')
 
 </head>
-<body class="{{ !empty($body_class) ? $body_class : '' }}" data-lazy-background="{{ asset('images/kreski-tlo.png') }}" style="background-position: center -16rem, center 1900px; background-repeat: no-repeat;">
+<body class="{{ !empty($body_class) ? $body_class : '' }}">
 {!! settings()->get("scripts_afterbody") !!}
 
 <div id="pagecontent">
@@ -81,14 +81,6 @@
     </div>
 @endif
 <script type="text/javascript">
-    $(window).on("scroll", function () {
-        AOS.init({
-            disable: function() {
-                const maxWidth = 1200;
-                return window.innerWidth < maxWidth;
-            }
-        });
-    });
     $(document).ready(function(){
         @if(settings()->get("popup_exit_status") == 1)
             $(document).mousemove(function(e) {
