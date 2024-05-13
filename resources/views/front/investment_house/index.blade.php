@@ -20,7 +20,7 @@
             <div class="container">
                 <div class="d-flex justify-content-between">
                     @if($prev_house)
-                    <a href="{{route('front.developro.house.index', [$prev_house->id])}}" class="link-hover-primary">
+                    <a href="{{route('front.developro.house.index', $prev_house->id)}}" class="link-hover-primary">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18.182" height="18.182"
                              viewBox="0 0 18.182 18.182">
                             <g transform="translate(15.182 9.091) rotate(135)">
@@ -41,7 +41,7 @@
                         oferty</a>
 
                     @if($next_house)
-                    <a href="{{route('front.developro.house.index', [$investment->slug, $next_house->id])}}" class="link-hover-primary">
+                    <a href="{{route('front.developro.house.index', $next_house->id)}}" class="link-hover-primary">
                         <span>następny</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="18.182" height="18.182"
                              viewBox="0 0 18.182 18.182">
@@ -115,11 +115,6 @@
                     </div>
                     <div class="col-12 col-md-6 col-lg-8">
                         <div class="d-flex gap-3">
-                            <a href="/img/E1 a_Strona_1.jpg" class="glightbox">
-                                <img src="/img/E1 a_Strona_1.webp" class="img-fluid  rounded-2" alt="" width="450"
-                                     height="636" loading="eager">
-                            </a>
-
                             @if($property->file)
                                 <a href="{{ asset('/investment/property/'.$property->file) }}" class="swipebox">
                                     <picture>
