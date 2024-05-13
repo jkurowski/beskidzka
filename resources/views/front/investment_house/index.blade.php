@@ -154,7 +154,7 @@
                     <div class="col-12 col-md-10 col-lg-8 offset-md-1 offset-lg-2">
                         <div class="d-flex bg-white align-items-center">
                             <div class="col-12 col-lg-8 col-xl-9">
-                                @include('front.contact.form', [ 'page_name' => $investment->name .' - '. $property->name])
+                                @include('front.contact.form', [ 'page_name' => $investment->name .' - '. $property->name .' - '. $property->number])
                             </div>
                             <div class="d-none d-lg-block col-lg-4 col-xl-3 position-relative">
                                 <div class="w-100 h-100">
