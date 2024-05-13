@@ -76,7 +76,7 @@
                                     <ul class="fw-medium text-start col-8 offset-2 col-md-12 offset-md-0 d-flex flex-column gap-2"
                                         data-aos="fade">
                                         <li>
-                                            Wielkość działki: {{ $property->garden }} m<sup>2</sup>
+                                            Wielkość działki: {{ $property->garden_area }} m<sup>2</sup>
                                         </li>
                                         <li>
                                             Ilość pokoi: {{ $property->rooms }}
