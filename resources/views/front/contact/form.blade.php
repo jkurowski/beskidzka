@@ -1,4 +1,4 @@
-<form id="contact-form" autocomplete="off" class="p-3 p-lg-30 validateForm" action="{{ route('front.contact.form') }}">
+<form id="contact-form" autocomplete="off" class="p-3 p-lg-30 validateForm" action="{{ route('front.contact.form') }}" method="post">
     {{ csrf_field() }}
     <div class="row">
         <div class="col-12">
