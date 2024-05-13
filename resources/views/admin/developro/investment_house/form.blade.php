@@ -89,12 +89,21 @@
                             @include('form-elements.html-input-text-count', ['label' => 'Opis strony', 'sublabel'=> 'Meta tag - description', 'name' => 'meta_description', 'value' => $entry->meta_description, 'maxlength' => 158])
 
                             @include('form-elements.html-input-file', [
-                                'label' => 'Plan mieszkania',
+                                'label' => 'Plan domu 1',
                                 'sublabel' => '(wymiary: '.config('images.property_plan.width').'px / '.config('images.property_plan.height').'px)',
                                 'name' => 'file',
                                 'file' => $entry->file,
                                 'file_preview' => config('images.property.preview_file_path')
                                 ])
+
+                            @include('form-elements.html-input-file', [
+                                'label' => 'Plan domu 2',
+                                'sublabel' => '(wymiary: '.config('images.property_plan.width').'px / '.config('images.property_plan.height').'px)',
+                                'name' => 'file_2',
+                                'file' => $entry->file_2,
+                                'file_preview' => config('images.property.preview_file_path')
+                            ])
+
                             @include('form-elements.html-input-file-pdf', [
                                     'label' => 'Plan .pdf',
                                     'sublabel' =>

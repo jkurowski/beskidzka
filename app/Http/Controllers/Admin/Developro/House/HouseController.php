@@ -60,6 +60,10 @@ class HouseController extends Controller
             $this->service->upload($request->name, $request->file('file'), $property);
         }
 
+        if ($request->hasFile('file_2')) {
+            $this->service->upload_2($request->name, $request->file('file_2'), $property);
+        }
+
         if ($request->hasFile('file_pdf')) {
             $this->service->uploadPdf($request->name, $request->file('file_pdf'), $property);
         }
@@ -83,6 +87,10 @@ class HouseController extends Controller
 
         if ($request->hasFile('file')) {
             $this->service->upload($request->name, $request->file('file'), $house, true);
+        }
+
+        if ($request->hasFile('file_2')) {
+            $this->service->upload_2($request->name, $request->file('file_2'), $house, true);
         }
 
         if ($request->hasFile('file_pdf')) {
