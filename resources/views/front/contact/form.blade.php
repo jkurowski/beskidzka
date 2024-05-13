@@ -61,14 +61,6 @@
                 @enderror
             </div>
         @endforeach
-
-
-        <div class="form-check text-start pt-3">
-            <input class="form-check-input" type="checkbox" value="" id="terms-check" name="terms" />
-            <label class="form-check-label small fw-medium" for="terms-check">
-                Akceptuję <a class="link-hover-primary text-decoration-underline" href="/polityka-prywatnosci/">politykę prywatności.</a><span class="text-primary">*</span>
-            </label>
-        </div>
     </div>
     <div class="col-12 text-end">
         <input type="hidden" name="page_name" value="{{ $page_name }}">
