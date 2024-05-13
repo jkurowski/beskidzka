@@ -116,7 +116,7 @@
                     <div class="col-12 col-md-6 col-lg-8">
                         <div class="d-flex gap-3">
                             @if($property->file)
-                                <a href="{{ asset('/investment/property/'.$property->file) }}" class="swipebox">
+                                <a href="{{ asset('/investment/property/'.$property->file) }}" class="glightbox">
                                     <picture>
                                         <source type="image/webp" srcset="{{ asset('/investment/property/thumbs/webp/'.$property->file_webp) }}">
                                         <source type="image/jpeg" srcset="{{ asset('/investment/property/thumbs/'.$property->file) }}">
@@ -126,7 +126,7 @@
                             @endif
 
                             @if($property->file_2)
-                                <a href="{{ asset('/investment/property/'.$property->file_2) }}" class="swipebox">
+                                <a href="{{ asset('/investment/property/'.$property->file_2) }}" class="glightbox">
                                     <picture>
                                         <source type="image/webp" srcset="{{ asset('/investment/property/thumbs/webp/'.$property->file_2_webp) }}">
                                         <source type="image/jpeg" srcset="{{ asset('/investment/property/thumbs/'.$property->file_2) }}">
@@ -223,3 +223,12 @@
         </section>
     </main>
 @endsection
+@push('scripts')
+    <script defer src="{{ asset('/js/glightbox.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('/css/glightbox.min.css') }}" />
+    <script defer>
+        document.addEventListener('DOMContentLoaded', () => {
+            const glightbox = new GLightbox()
+        })
+    </script>
+@endpush

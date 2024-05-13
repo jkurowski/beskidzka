@@ -914,4 +914,11 @@
 @push('scripts')
     <script src="{{ asset('/js/plan/imagemapster.js') }}" charset="utf-8"></script>
     <script src="{{ asset('/js/plan/plan.js') }}" charset="utf-8"></script>
+    <script defer src="{{ asset('/js/glightbox.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('/css/glightbox.min.css') }}" />
+    <script defer>
+        document.addEventListener('DOMContentLoaded', () => {
+            const glightbox = new GLightbox()
+        })
+    </script>
 @endpush
