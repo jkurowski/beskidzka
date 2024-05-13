@@ -94,9 +94,10 @@
                                         </a>
                                     </div>
                                     <div data-aos="fade-up">
+                                        @if($property->file_pdf)
                                         <a class="fw-light link-hover-primary link-with-border-bottom d-inline-flex gap-2 align-items-center"
-                                           href="{{ asset('images/card_thumbnail.png') }}" style="text-underline-offset: 8px;"
-                                           download="card_thumbnail.png">
+                                           href="{{ asset('investment/property/pdf/'.$property->file_pdf) }}" style="text-underline-offset: 8px;"
+                                           download="card_thumbnail.png" target="_blank">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="13.221" height="15.424"
                                                  viewBox="0 0 13.221 15.424" fill="currentColor">
                                                 <path id="pdf_icon"
@@ -108,6 +109,7 @@
                                                 Pobierz kartę domu
                                             </span>
                                         </a>
+                                        @endif
                                     </div>
 
                                 </div>
