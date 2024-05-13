@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Warstwa_1" data-name="Warstwa 1" xmlns="http://www.w3.org/2000/svg" width="108" height="137" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 108 137">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke-width: 0px;
+      }
+
+      .cls-4 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: #422359;
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-1" width="108" height="137"/>
+    </clipPath>
+  </defs>
+  <g id="Group_12" data-name="Group 12">
+    <g id="Group_10" data-name="Group 10">
+      <g class="cls-4">
+        <g id="Group_9" data-name="Group 9">
+          <path id="Path_20" data-name="Path 20" class="cls-3" d="M53.4-.2C23.9-.2,0,23.7,0,53.1h0C0,96.3,53.4,137,53.4,137c0,0,53.4-40.7,53.4-83.9S82.9-.2,53.4-.2h0"/>
+        </g>
+      </g>
+    </g>
+    <g id="Group_11" data-name="Group 11">
+      <path id="Path_4" data-name="Path 4" class="cls-2" d="M78.7,81.8v-13.7c-6.2-3.6-24.8-14.3-34.1-19.7l-10.2-5.9.8-.5c.2-.2.4-.3.7-.4,4.7-2.7,14.8-8.6,18.1-10.5h.1c0,0,.1,0,.1,0,3.3,1.9,17.6,10.2,24.5,14.1h0s0-6.7,0-6.7c-5.4-3.1-21.3-12.3-24.6-14.2-3.8,2.2-17.6,10.1-24.7,14.2v7.8c4.1,2.3,8.8,5.1,13,7.5l2,1.1c8.6,5,26.2,15.2,29,16.8h.1c0,0,0,4.2,0,4.2h-6.8s-12.8-7.4-18.1-10.5l-19.2-11.1v6.7c5.2,3,28.3,16.4,35.7,20.6,4.2,0,11.1,0,13.6,0"/>
+      <path id="Path_5" data-name="Path 5" class="cls-2" d="M72.5,49.7c-6.9-4-16.2-9.3-18.4-10.6-1,.6-4,2.3-5.8,3.3l30.5,17.6v-6.7l-6.2-3.6Z"/>
+      <path id="Path_6" data-name="Path 6" class="cls-2" d="M51.2,81.7l-21.8-12.6v6.7l10.2,5.9h11.6Z"/>
+    </g>
+  </g>
+</svg>

@@ -24,7 +24,7 @@
 
     @stack('style')
 </head>
-<body class="{{ !empty($body_class) ? $body_class : '' }}" data-lazy-background="{{ asset('images/kreski-tlo.png') }}" style="background-position: center -16rem, center 1900px; background-repeat: no-repeat;">
+<body class="{{ !empty($body_class) ? $body_class : '' }}">
 {!! settings()->get("scripts_afterbody") !!}
 
 @include('layouts.partials.header')
@@ -73,26 +73,6 @@
     </div>
 @endif
 <script type="text/javascript">
-    const map = L.map('map').setView([52.124160, 20.668000], 14);
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-        subdomains: 'abcd',
-        maxZoom: 20
-    }).addTo(map);
-
-    L.marker([52.124160, 20.668000]).addTo(map)
-        .bindPopup('<img src="{{ asset('images/logo-dark.svg') }}" width="73" height="27" alt="logo" class="mb-2"> <br> Przeskok 6 <br> 05-822 Milanówek')
-        .openPopup();
-
-    $(window).on("scroll", function () {
-        AOS.init({
-            disable: function() {
-                const maxWidth = 1200;
-                return window.innerWidth < maxWidth;
-            }
-        });
-    });
-
     $(document).ready(function(){
 
         $(".validateForm").validationEngine({
