@@ -1,4 +1,4 @@
-{!! Form::label($name, '<div class="text-right">'.$label.' <span class="text-danger d-inline">*</span></div>', ['class' => 'col-12 col-form-label control-label pb-2 required'], false) !!}
+{!! Form::label($name, '<div class="text-right">'.$label.'</div>', ['class' => 'col-12 col-form-label control-label pb-2 required'], false) !!}
 <div class="@isset($class) {{ $class }} @else {{ 'col-12 control-input position-relative d-flex align-items-center' }} @endisset">
     @isset($selected)
         {!! Form::select($name.'[]', $select, $selected, array('class' => 'form-control selectpicker', 'multiple')) !!}

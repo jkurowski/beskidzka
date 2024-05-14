@@ -84,7 +84,7 @@
                                         </li>
                                         @if($property->window)
                                         <li>
-                                            Wystawa okienna: {{ $property->window }}
+                                            Wystawa okienna: {!! multiselect2name($property->window) !!}
                                         </li>
                                         @endif
                                     </ul>

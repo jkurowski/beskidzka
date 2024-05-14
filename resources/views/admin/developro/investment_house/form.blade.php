@@ -84,7 +84,18 @@
 
                             @include('form-elements.input-text', ['label' => 'Garaż', 'name' => 'garage', 'value' => $entry->garage])
                             @include('form-elements.input-text', ['label' => 'Miejsce postojowe', 'name' => 'parking_space', 'value' => $entry->parking_space])
-                            @include('form-elements.input-text', ['label' => 'Wystawa okienna', 'name' => 'window', 'value' => $entry->window])
+
+                            @include('form-elements.html-select-multiple', ['label' => 'Wystawa okienna', 'name' => 'window', 'selected' => multiselect($entry->window), 'select' => [
+                                '1' => 'Północ',
+                                '2' => 'Południe',
+                                '3' => 'Wschód',
+                                '4' => 'Zachód',
+                                '5' => 'Północny wschód',
+                                '6' => 'Północny zachód',
+                                '7' => 'Południowy wschód',
+                                '8' => 'Południowy zachód'
+                                ]
+                            ])
 
                             @include('form-elements.html-input-text-count', ['label' => 'Nagłówek strony', 'sublabel'=> 'Meta tag - title', 'name' => 'meta_title', 'value' => $entry->meta_title, 'maxlength' => 60])
                             @include('form-elements.html-input-text-count', ['label' => 'Opis strony', 'sublabel'=> 'Meta tag - description', 'name' => 'meta_description', 'value' => $entry->meta_description, 'maxlength' => 158])
