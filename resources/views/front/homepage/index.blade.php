@@ -201,7 +201,7 @@
                             </div>
                             <div class="col-12 col-md-6 text-center">
                                 <div data-aos="fade">
-                                    <img src="{{ asset('images/postepy_01.webp') }}" alt="" decoding="async" loading="lazy" width="438" height="219"
+                                    <img src="{{ asset('images/postepy_01_a.webp') }}" alt="" decoding="async" loading="lazy" width="438" height="219"
                                          class="rounded-2 img-fluid">
                                 </div>
                             </div>
@@ -252,7 +252,7 @@
                             </div>
                             <div class="col-12 col-md-6 text-center">
                                 <div data-aos="fade">
-                                    <img src="{{ asset('images/10_KUCHNIA 2.webp') }}" alt="" decoding="async" loading="lazy" width="438" height="219"
+                                    <img src="{{ asset('images/stan_deweloperski.webp') }}" alt="" decoding="async" loading="lazy" width="438" height="219"
                                          class="rounded-2 img-fluid">
                                 </div>
                             </div>
