@@ -68,6 +68,7 @@ class PropertyFormRequest extends FormRequest
             'parking_space' => '',
             'garage' => '',
             'storeroom' => '',
+            'window' => '',
             'deadline' => '',
             'kitchen_type' => 'integer',
             'price' => '',

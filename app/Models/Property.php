@@ -40,6 +40,7 @@ class Property extends Model
         'parking_space',
         'garage',
         'storeroom',
+        'window',
         'deadline',
         'kitchen_type',
         'type',

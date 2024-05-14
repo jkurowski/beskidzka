@@ -82,9 +82,11 @@
                                         <li>
                                             Ilość pokoi: {{ $property->rooms }}
                                         </li>
+                                        @if($property->window)
                                         <li>
-                                            Wystawa okienna:
+                                            Wystawa okienna: {{ $property->window }}
                                         </li>
+                                        @endif
                                     </ul>
                                 </div>
 
