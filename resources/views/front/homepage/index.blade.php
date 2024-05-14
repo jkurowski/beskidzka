@@ -18,7 +18,7 @@
                                 <span data-aos="fade-up" data-aos-delay="200">park</span>
                             </h1>
                             <p class="text-pretty fs-3 fw-light py-4 py-md-50" data-aos="fade-up" data-aos-delay="400">
-                                Twój zielony zakątek Łodzi
+                                TWÓJ ZIELONY ZAKĄTEK ŁODZI
                             </p>
                             <a href="/beskidzka-park/#oferta" class="btn btn-primary btn-min-width" data-aos="fade-up"
                                data-aos-delay="600">
@@ -227,8 +227,7 @@
                             </div>
                             <div class="col-12 col-md-6 text-center">
                                 <div data-aos="fade">
-                                    <img src="{{ asset('images/postepy_02.webp') }}" alt="" decoding="async" loading="lazy" width="438" height="219"
-                                         class="rounded-2 img-fluid">
+                                    <img src="{{ asset('images/postepy_02_a.webp') }}" alt="" decoding="async" loading="lazy" width="438" height="219" class="rounded-2 img-fluid">
                                 </div>
                             </div>
                         </div>
