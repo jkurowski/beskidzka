@@ -329,34 +329,6 @@
                                     <img src="{{ asset('images/10_KUCHNIA 2.webp') }}" alt="" width="438" height="392" loading="lazy"
                                          class="w-100 h-100 object-fit-cover rounded-2" />
                                 </div>
-                                <div class="px-3 aspect-ratio-slide">
-                                    <img src="{{ asset('images/07_BESKIDZKA_DRON.webp') }}" alt="" width="438" height="392" loading="lazy"
-                                         class="w-100 h-100 object-fit-cover rounded-2" />
-                                </div>
-                                <div class="px-3 aspect-ratio-slide">
-                                    <img src="{{ asset('images/01_BESKIDZKA_TYŁ 1.webp') }}" alt="" width="438" height="392" loading="lazy"
-                                         class="w-100 h-100 object-fit-cover rounded-2" />
-                                </div>
-                                <div class="px-3 aspect-ratio-slide">
-                                    <img src="{{ asset('images/05_BESKIDZKA_TYŁ 2.webp') }}" alt="" width="438" height="392" loading="lazy"
-                                         class="w-100 h-100 object-fit-cover rounded-2" />
-                                </div>
-                                <div class="px-3 aspect-ratio-slide">
-                                    <img src="{{ asset('images/06_BESKIDZKA_TYŁ 3.webp') }}" alt="" width="438" height="392" loading="lazy"
-                                         class="w-100 h-100 object-fit-cover rounded-2" />
-                                </div>
-                                <div class="px-3 aspect-ratio-slide">
-                                    <img src="{{ asset('images/02_BESKIDZKA_FRONT 1.webp') }}" alt="" width="438" height="392" loading="lazy"
-                                         class="w-100 h-100 object-fit-cover rounded-2" />
-                                </div>
-                                <div class="px-3 aspect-ratio-slide">
-                                    <img src="{{ asset('images/03_BESKIDZKA_FRONT 2.webp') }}" alt="" width="438" height="392" loading="lazy"
-                                         class="w-100 h-100 object-fit-cover rounded-2" />
-                                </div>
-                                <div class="px-3 aspect-ratio-slide">
-                                    <img src="{{ asset('images/04_BESKIDZKA_FRONT 3.webp') }}" alt="" width="438" height="392" loading="lazy"
-                                         class="w-100 h-100 object-fit-cover rounded-2" />
-                                </div>
                             </div>
                             <div class="slider-controls">
                                 <button class="prev-arrow btn btn-primary w-40 h-40">

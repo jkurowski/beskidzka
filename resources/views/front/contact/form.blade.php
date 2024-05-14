@@ -71,7 +71,6 @@
     </div>
 </form>
 @push('scripts')
-    <script src="{{ asset('css/form.css') }}" charset="utf-8"></script>
     <script src="{{ asset('js/validation.js') }}" charset="utf-8"></script>
     <script src="{{ asset('js/pl.js') }}" charset="utf-8"></script>
     <script src="https://www.google.com/recaptcha/api.js"></script>
