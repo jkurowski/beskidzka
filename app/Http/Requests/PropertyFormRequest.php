@@ -30,6 +30,11 @@ class PropertyFormRequest extends FormRequest
 //            ]);
 //        }
 
+        // If 'window' parameter is not present or is empty, set it to null
+        if (!$this->filled('window')) {
+            $this->merge(['window' => null]);
+        }
+
         $this->merge([
             'investment_id' => $this->route('investment')->id
         ]);
@@ -68,7 +73,7 @@ class PropertyFormRequest extends FormRequest
             'parking_space' => '',
             'garage' => '',
             'storeroom' => '',
-            'window' => '',
+            'window' => 'sometimes|nullable',
             'deadline' => '',
             'kitchen_type' => 'integer',
             'price' => '',
