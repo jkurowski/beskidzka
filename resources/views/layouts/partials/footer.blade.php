@@ -45,7 +45,7 @@
                 <ul class="list-unstyled">
                     <li class="pb-3">
                         <a class="link-white fw-medium d-inline-flex gap-2 justify-content-center align-items-center"
-                           href="tel:+48536 882 090">
+                           href="tel:+48536882090">
                             <svg xmlns="http://www.w3.org/2000/svg" width="15.573" height="15.574" viewBox="0 0 15.573 15.574"
                                  stroke="currentColor">
                                 <path id="tel_icon"
@@ -107,7 +107,8 @@
                             </div>
                             <div>
                                 Godziny otwarcia<br />
-                                8:00-16:00
+                                poniedziałek-piątek<br>
+                                9:00 - 17:00<br>
                             </div>
                         </div>
                     </li>
