@@ -82,7 +82,7 @@
                                         <li>
                                             Ilość pokoi: {{ $property->rooms }}
                                         </li>
-                                        @if($property->window)
+                                        @isset($property->window)
                                         <li>
                                             Wystawa okienna: {!! multiselect2name($property->window) !!}
                                         </li>
@@ -115,28 +115,32 @@
                                     </div>
 
                                 </div>
+                            </div>
                         </article>
                     </div>
                     <div class="col-12 col-md-6 col-lg-8">
-                        <div class="d-flex gap-3">
+                        <div class="row">
                             @if($property->file)
-                                <a href="{{ asset('/investment/property/'.$property->file) }}" class="glightbox">
-                                    <picture>
-                                        <source type="image/webp" srcset="{{ asset('/investment/property/thumbs/webp/'.$property->file_webp) }}">
-                                        <source type="image/jpeg" srcset="{{ asset('/investment/property/thumbs/'.$property->file) }}">
-                                        <img src="{{ asset('/investment/property/thumbs/'.$property->file) }}" alt="{{$property->name}}" loading="eager" class="img-thumb">
-                                    </picture>
-                                </a>
+                                <div class="col-6">
+                                    <a href="{{ asset('/investment/property/'.$property->file) }}" class="glightbox">
+                                        <picture>
+                                            <source type="image/webp" srcset="{{ asset('/investment/property/thumbs/webp/'.$property->file_webp) }}">
+                                            <source type="image/jpeg" srcset="{{ asset('/investment/property/thumbs/'.$property->file) }}">
+                                            <img src="{{ asset('/investment/property/thumbs/'.$property->file) }}" alt="{{$property->name}}" loading="eager" class="img-thumb w-100">
+                                        </picture>
+                                    </a>
+                                </div>
                             @endif
-
                             @if($property->file_2)
-                                <a href="{{ asset('/investment/property/'.$property->file_2) }}" class="glightbox">
-                                    <picture>
-                                        <source type="image/webp" srcset="{{ asset('/investment/property/thumbs/webp/'.$property->file_2_webp) }}">
-                                        <source type="image/jpeg" srcset="{{ asset('/investment/property/thumbs/'.$property->file_2) }}">
-                                        <img src="{{ asset('/investment/property/thumbs/'.$property->file_2) }}" alt="{{$property->name}}" loading="eager" class="img-thumb">
-                                    </picture>
-                                </a>
+                                <div class="col-6">
+                                    <a href="{{ asset('/investment/property/'.$property->file_2) }}" class="glightbox">
+                                        <picture>
+                                            <source type="image/webp" srcset="{{ asset('/investment/property/thumbs/webp/'.$property->file_2_webp) }}">
+                                            <source type="image/jpeg" srcset="{{ asset('/investment/property/thumbs/'.$property->file_2) }}">
+                                            <img src="{{ asset('/investment/property/thumbs/'.$property->file_2) }}" alt="{{$property->name}}" loading="eager" class="img-thumb w-100">
+                                        </picture>
+                                    </a>
+                                </div>
                             @endif
                         </div>
                     </div>
