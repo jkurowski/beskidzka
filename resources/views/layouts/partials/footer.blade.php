@@ -8,14 +8,10 @@
                 </div>
                 <div class="d-flex justify-content-center align-items-center gap-4 pt-4">
                     <div>
-                        <a href="facebook-link" aria-label="Przejdź do facebooka" class="btn btn-primary rounded-circle p-2">
-                            <img src="{{ asset('images/facebook.svg') }}" alt="" width="16" height="16" loading="lazy" decoding="async" />
-                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61556524389920" aria-label="Przejdź do facebooka" class="btn btn-primary rounded-circle p-2"><img src="{{ asset('images/facebook.svg') }}" alt="" width="16" height="16" loading="lazy" decoding="async" /></a>
                     </div>
                     <div>
-                        <a href="instagram-link" aria-label="Przejdź do instagrama" class="btn btn-primary rounded-circle p-2">
-                            <img src="{{ asset('images/instagram.svg') }}" alt="" width="16" height="16" loading="lazy" decoding="async" />
-                        </a>
+                        <a href="https://www.instagram.com/beskidzka.park" aria-label="Przejdź do instagrama" class="btn btn-primary rounded-circle p-2"><img src="{{ asset('images/instagram.svg') }}" alt="" width="16" height="16" loading="lazy" decoding="async" /></a>
                     </div>
                 </div>
             </div>
