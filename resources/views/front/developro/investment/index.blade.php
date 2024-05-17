@@ -17,7 +17,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="o-inwestycji">
             <div class="container">
                 <div class="row gy-30 text-center text-md-start">
                     <div class="col-12 col-md-6 col-xl-5">
@@ -487,8 +487,6 @@
             </div>
         </section>
 
-
-
         <section class="position-relative overflow-hidden">
             <div class="container">
                 <div class="row gy-30 text-center text-md-start">
@@ -521,15 +519,15 @@
                             <div
                                     data-slick='{"slidesToShow": 2.1,  "prevArrow": ".prev-arrow", "nextArrow": ".next-arrow", "responsive": [{"breakpoint": 768, "settings": {"slidesToShow": 1}}]}'>
                                 <div class="px-3 aspect-ratio-slide">
-                                    <img src="{{ asset('images/08_SALON 1.webp') }}" alt="" width="438" height="392" loading="lazy"
+                                    <img src="{{ asset('images/08_SALON 1_thumb.webp') }}" alt="" width="438" height="392" loading="lazy"
                                          class="w-100 h-100 object-fit-cover rounded-2" />
                                 </div>
                                 <div class="px-3 aspect-ratio-slide">
-                                    <img src="{{ asset('images/09_KUCHNIA 1.webp') }}" alt="" width="438" height="392" loading="lazy"
+                                    <img src="{{ asset('images/09_KUCHNIA 1_thumb.webp') }}" alt="" width="438" height="392" loading="lazy"
                                          class="w-100 h-100 object-fit-cover rounded-2" />
                                 </div>
                                 <div class="px-3 aspect-ratio-slide">
-                                    <img src="{{ asset('images/10_KUCHNIA 2.webp') }}" alt="" width="438" height="392" loading="lazy"
+                                    <img src="{{ asset('images/10_KUCHNIA 2_thumb.webp') }}" alt="" width="438" height="392" loading="lazy"
                                          class="w-100 h-100 object-fit-cover rounded-2" />
                                 </div>
                             </div>
@@ -549,7 +547,6 @@
             </div>
         </section>
 
-
         <section id="wizualizacje">
             <div class="container">
                 <div class="row gy-20 text-center">
@@ -564,7 +561,7 @@
                     <div class="col" data-aos="fade">
                         <div class="aspect-ratio-slide">
                             <a class="glightbox" data-gallery="wiz" href="{{ asset('images/08_SALON 1.webp') }}">
-                                <img src="{{ asset('images/08_SALON 1.webp') }}" alt="" loading="lazy" width="321" height="288"
+                                <img src="{{ asset('images/08_SALON 1_thumb.webp') }}" alt="" loading="lazy" width="321" height="288"
                                      class="w-100 h-100 object-fit-cover  rounded-2">
                             </a>
                         </div>
@@ -572,7 +569,7 @@
                     <div class="col" data-aos="fade">
                         <div class="aspect-ratio-slide">
                             <a class="glightbox" data-gallery="wiz" href="{{ asset('images/09_KUCHNIA 1.webp') }}">
-                                <img src="{{ asset('images/09_KUCHNIA 1.webp') }}" alt="" loading="lazy" width="321" height="288"
+                                <img src="{{ asset('images/09_KUCHNIA 1_thumb.webp') }}" alt="" loading="lazy" width="321" height="288"
                                      class="w-100 h-100 object-fit-cover  rounded-2">
                             </a>
                         </div>
@@ -580,7 +577,7 @@
                     <div class="col" data-aos="fade">
                         <div class="aspect-ratio-slide">
                             <a class="glightbox" data-gallery="wiz" href="{{ asset('images/10_KUCHNIA 2.webp') }}">
-                                <img src="{{ asset('images/10_KUCHNIA 2.webp') }}" alt="" loading="lazy" width="321" height="288"
+                                <img src="{{ asset('images/10_KUCHNIA 2_thumb.webp') }}" alt="" loading="lazy" width="321" height="288"
                                      class="w-100 h-100 object-fit-cover  rounded-2">
                             </a>
                         </div>
@@ -588,7 +585,7 @@
                     <div class="col" data-aos="fade">
                         <div class="aspect-ratio-slide">
                             <a class="glightbox" data-gallery="wiz" href="{{ asset('images/07_BESKIDZKA_DRON.webp') }}">
-                                <img src="{{ asset('images/07_BESKIDZKA_DRON.webp') }}" alt="" loading="lazy" width="321" height="288"
+                                <img src="{{ asset('images/07_BESKIDZKA_DRON_thumb.webp') }}" alt="" loading="lazy" width="321" height="288"
                                      class="w-100 h-100 object-fit-cover  rounded-2">
                             </a>
                         </div>
@@ -596,7 +593,7 @@
                     <div class="col" data-aos="fade">
                         <div class="aspect-ratio-slide">
                             <a class="glightbox" data-gallery="wiz" href="{{ asset('images/01_BESKIDZKA_TYŁ 1.webp') }}">
-                                <img src="{{ asset('images/01_BESKIDZKA_TYŁ 1.webp') }}" alt="" loading="lazy" width="321" height="288"
+                                <img src="{{ asset('images/01_BESKIDZKA_TYŁ 1_thumb.webp') }}" alt="" loading="lazy" width="321" height="288"
                                      class="w-100 h-100 object-fit-cover  rounded-2">
                             </a>
                         </div>
@@ -604,7 +601,7 @@
                     <div class="col" data-aos="fade">
                         <div class="aspect-ratio-slide">
                             <a class="glightbox" data-gallery="wiz" href="{{ asset('images/05_BESKIDZKA_TYŁ 2.webp') }}">
-                                <img src="{{ asset('images/05_BESKIDZKA_TYŁ 2.webp') }}" alt="" loading="lazy" width="321" height="288"
+                                <img src="{{ asset('images/05_BESKIDZKA_TYŁ 2_thumb.webp') }}" alt="" loading="lazy" width="321" height="288"
                                      class="w-100 h-100 object-fit-cover  rounded-2">
                             </a>
                         </div>
@@ -612,7 +609,7 @@
                     <div class="col" data-aos="fade">
                         <div class="aspect-ratio-slide">
                             <a class="glightbox" data-gallery="wiz" href="{{ asset('images/06_BESKIDZKA_TYŁ 3.webp') }}">
-                                <img src="{{ asset('images/06_BESKIDZKA_TYŁ 3.webp') }}" alt="" loading="lazy" width="321" height="288"
+                                <img src="{{ asset('images/06_BESKIDZKA_TYŁ 3_thumb.webp') }}" alt="" loading="lazy" width="321" height="288"
                                      class="w-100 h-100 object-fit-cover  rounded-2">
                             </a>
                         </div>
@@ -620,7 +617,7 @@
                     <div class="col" data-aos="fade">
                         <div class="aspect-ratio-slide">
                             <a class="glightbox" data-gallery="wiz" href="{{ asset('images/02_BESKIDZKA_FRONT 1.webp') }}">
-                                <img src="{{ asset('images/02_BESKIDZKA_FRONT 1.webp') }}" alt="" loading="lazy" width="321" height="288"
+                                <img src="{{ asset('images/02_BESKIDZKA_FRONT 1_thumb.webp') }}" alt="" loading="lazy" width="321" height="288"
                                      class="w-100 h-100 object-fit-cover  rounded-2">
                             </a>
                         </div>
@@ -628,7 +625,7 @@
                     <div class="col" data-aos="fade">
                         <div class="aspect-ratio-slide">
                             <a class="glightbox" data-gallery="wiz" href="{{ asset('images/03_BESKIDZKA_FRONT 2.webp') }}">
-                                <img src="{{ asset('images/03_BESKIDZKA_FRONT 2.webp') }}" alt="" loading="lazy" width="321" height="288"
+                                <img src="{{ asset('images/03_BESKIDZKA_FRONT 2_thumb.webp') }}" alt="" loading="lazy" width="321" height="288"
                                      class="w-100 h-100 object-fit-cover  rounded-2">
                             </a>
                         </div>
@@ -636,7 +633,7 @@
                     <div class="col" data-aos="fade">
                         <div class="aspect-ratio-slide">
                             <a class="glightbox" data-gallery="wiz" href="{{ asset('images/04_BESKIDZKA_FRONT 3.webp') }}">
-                                <img src="{{ asset('images/04_BESKIDZKA_FRONT 3.webp') }}" alt="" loading="lazy" width="321" height="288"
+                                <img src="{{ asset('images/04_BESKIDZKA_FRONT 3_thumb.webp') }}" alt="" loading="lazy" width="321" height="288"
                                      class="w-100 h-100 object-fit-cover  rounded-2">
                             </a>
                         </div>
@@ -644,7 +641,6 @@
                 </div>
             </div>
         </section>
-
 
         <section id="lokalizacja">
             <div class="container">
@@ -841,7 +837,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="investContact">
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 pt-3 pt-lg-5">

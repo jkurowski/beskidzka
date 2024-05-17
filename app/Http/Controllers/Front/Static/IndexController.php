@@ -24,4 +24,10 @@ class IndexController extends Controller
         $page = Page::find(2);
         return view('front.static.finansowanie', compact('page'));
     }
+
+    public function about()
+    {
+        $page = Page::find(6);
+        return view('front.static.about', compact('page'));
+    }
 }

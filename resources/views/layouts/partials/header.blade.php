@@ -35,15 +35,63 @@
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <!-- Links -->
                 <div class="collapse navbar-collapse justify-content-end bg-white" id="navbarNav">
                     <ul class="navbar-nav py-3 fw-light gap-3 align-items-lg-center fw-semibold">
-                        <li class="nav-item">
+                        <li class="nav-item @if (!isset($page)) active @endif">
                             <a class="nav-link link-hover-primary" href="/">Strona główna</a>
                         </li>
-                        <li class="nav-item @isset($page) @if($page->slug == 'beskidzka-park') active @endif @endisset">
-                            <a class="nav-link link-hover-primary" href="/beskidzka-park/">Beskidzka Park</a>
+                        <li class="nav-item @isset($page) @if($page->slug == 'o-nas') active @endif @endisset">
+                            <a class="nav-link link-hover-primary" href="/o-nas">O nas</a>
                         </li>
+                        <!-- Dropdown @start -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link link-hover-primary" href="/beskidzka-park/">Beskidzka Park <svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-chevron-down ms-2" viewBox="0 0 16 16" id="navbar-dropdown" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                    <path fill-rule="evenodd"
+                                          d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                </svg></a>
+
+                            <ul class="dropdown-menu">
+                                @isset($page)
+                                    @if($page->slug == 'beskidzka-park')
+                                        <li class="nav-item ">
+                                            <a class="nav-link link-hover-primary" href="#o-inwestycji">O inwestycji</a>
+                                        </li>
+                                        <li class="nav-item ">
+                                            <a class="nav-link link-hover-primary" href="#oferta">Wybierz dom</a>
+                                        </li>
+                                        <li class="nav-item ">
+                                            <a class="nav-link link-hover-primary" href="#wizualizacje">Galeria</a>
+                                        </li>
+                                    @else
+                                        <li class="nav-item ">
+                                            <a class="nav-link link-hover-primary" href="/beskidzka-park/#o-inwestycji">O inwestycji</a>
+                                        </li>
+                                        <li class="nav-item ">
+                                            <a class="nav-link link-hover-primary" href="/beskidzka-park/#oferta">Wybierz dom</a>
+                                        </li>
+                                        <li class="nav-item ">
+                                            <a class="nav-link link-hover-primary" href="/beskidzka-park/#wizualizacje">Galeria</a>
+                                        </li>
+                                    @endif
+                                @else
+                                    <li class="nav-item ">
+                                        <a class="nav-link link-hover-primary" href="/beskidzka-park/#o-inwestycji">O inwestycji</a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a class="nav-link link-hover-primary" href="/beskidzka-park/#oferta">Wybierz dom</a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a class="nav-link link-hover-primary" href="/beskidzka-park/#wizualizacje">Galeria</a>
+                                    </li>
+                                @endisset
+                            </ul>
+                        </li>
+                        <!-- Dropdown @end -->
                         <li class="nav-item @isset($page) @if($page->slug == 'finansowanie') active @endif @endisset">
                             <a class="nav-link link-hover-primary" href="/finansowanie/">Finansowanie</a>
                         </li>
@@ -52,6 +100,7 @@
                         </li>
                     </ul>
                 </div>
+
             </div>
         </div>
     </nav>

@@ -82,7 +82,7 @@
     <div class="form-group form-group-submit">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-12 d-flex justify-content-end">
+                <div class="col-12 d-flex justify-content-end d-none">
                     <a href="{{route('admin.page.create')}}" class="me-3 btn btn-primary">Dodaj stronę</a>
                     <a href="{{route('admin.url.create')}}" class="btn btn-primary">Dodaj link</a>
                 </div>

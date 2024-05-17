@@ -42,6 +42,7 @@ Route::group(['namespace' => 'Front', 'middleware' => 'restrictIp', 'as' => 'fro
 
     // Static pages
     Route::get('/finansowanie', 'Static\IndexController@finansowanie')->name('static.finansowanie');
+    Route::get('/o-nas', 'Static\IndexController@about')->name('static.about');
 
     Route::get('/kontakt', 'ContactController@index')->name('contact.index');
     Route::post('/kontakt', 'ContactController@contact')->name('contact.form');
