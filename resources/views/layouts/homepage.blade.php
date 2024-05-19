@@ -36,20 +36,12 @@
 @include('layouts.partials.cookies')
 
 <!-- Styles -->
-<link href="{{ asset('/css/bootstrap.min.css') }}" rel="stylesheet">
-<link href="{{ asset('/css/style.css') }}" rel="stylesheet">
-<link href="{{ asset('/css/slick.css') }}" rel="stylesheet">
-<link href="{{ asset('/css/animations.css') }}" rel="stylesheet">
-<link href="{{ asset('/css/leaflet.css') }}" rel="stylesheet">
-<link href="{{ asset('/css/aos.css') }}" rel="stylesheet">
+<link href="{{ asset('/css/style.min.css') }}" rel="stylesheet">
 
 <!-- jQuery -->
 <script src="{{ asset('/js/jquery.min.js') }}" charset="utf-8"></script>
-<script src="{{ asset('/js/slick.min.js') }}" charset="utf-8"></script>
 <script src="{{ asset('/js/bootstrap.bundle.min.js') }}" charset="utf-8"></script>
-<script src="{{ asset('/js/leaflet.js') }}" charset="utf-8"></script>
-<script src="{{ asset('/js/aos.js') }}" charset="utf-8"></script>
-<script src="{{ asset('/js/main.js') }}" charset="utf-8"></script>
+<script src="{{ asset('/js/main.min.js') }}" charset="utf-8"></script>
 
 @stack('scripts')
 
