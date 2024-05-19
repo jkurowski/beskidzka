@@ -22,6 +22,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+    <link rel="preload" fetchpriority="high" as="image" href="{{ asset('images/bg.webp') }}" type="image/webp">
+
     @stack('style')
 </head>
 <body class="{{ !empty($body_class) ? $body_class : '' }}">
