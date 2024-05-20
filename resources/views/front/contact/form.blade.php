@@ -74,7 +74,7 @@
     <fscript src="{{ asset('js/validation.min.js') }}" charset="utf-8"></fscript>
     <fscript src="https://www.google.com/recaptcha/api.js"></fscript>
 
-    <fscript type="text/javascript">
+    <script type="text/javascript">
         $(document).ready(function(){
             $(".validateForm").validationEngine({
                 validateNonVisibleFields: true,
@@ -101,5 +101,5 @@
             }, 1500, 'easeInOutExpo');
         });
         @endif
-    </fscript>
+    </script>
 @endpush
