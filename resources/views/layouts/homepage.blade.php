@@ -20,11 +20,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link rel="preload" fetchpriority="high" as="image" href="{{ asset('images/bg.webp') }}" type="image/webp">
-    <link rel='preload' as='style' href='{{ asset('css/style.min.css') }}'>
+    <!-- Preloads  -->
+    <link rel="preload" fetchpriority="high" as="image" href="https://beskidzkapark.pl/images/bg.webp" type="image/webp">
+    <link rel='preload' as='style' href='https://beskidzkapark.pl/css/style.min.css'>
     <link rel="preload" as='style' href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
 
-    @stack('style')
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://beskidzkapark.pl/css/style.min.css" rel="stylesheet">
 
     <!-- Delaying scripts -->
     <style>fscript {display: none;}</style>
