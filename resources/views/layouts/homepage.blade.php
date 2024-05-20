@@ -1,6 +1,31 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
+    <title>{{ settings()->get("page_title") }}</title>
+
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ settings()->get("page_description") }}">
+    <meta name="robots" content="{{ settings()->get("page_robots") }}">
+    <meta name="author" content="{{ settings()->get("page_author") }}">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <link rel="icon" type="image/x-icon" href="{{ asset('images/favicon.ico') }}">
+
+    <!-- Fonts -->
+    <link rel="DNS-prefetch" href="//fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preload" fetchpriority="high" as="image" href="{{ asset('images/bg.webp') }}" type="image/webp">
+    <link rel='preload' as='style' href='{{ asset('css/style.min.css') }}'>
+    <link rel="preload" as='style' href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
+
+    @stack('style')
+
     <!-- Delaying scripts -->
     <style>fscript {display: none;}</style>
     <script>
@@ -57,31 +82,6 @@
     <!-- // -->
 
     {!! settings()->get("scripts_head") !!}
-
-    <title>{{ settings()->get("page_title") }}</title>
-
-    <meta charset="utf-8">
-    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{ settings()->get("page_description") }}">
-    <meta name="robots" content="{{ settings()->get("page_robots") }}">
-    <meta name="author" content="{{ settings()->get("page_author") }}">
-
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <link rel="icon" type="image/x-icon" href="{{ asset('images/favicon.ico') }}">
-
-    <!-- Fonts -->
-    <link rel="DNS-prefetch" href="//fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link rel="preload" fetchpriority="high" as="image" href="{{ asset('images/bg.webp') }}" type="image/webp">
-    <link rel='preload' as='style' href='{{ asset('css/style.min.css') }}'>
-    <link rel="preload" as='style' href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
-
-    @stack('style')
 </head>
 <body class="{{ !empty($body_class) ? $body_class : '' }}">
 {!! settings()->get("scripts_afterbody") !!}
