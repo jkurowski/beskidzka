@@ -23,9 +23,64 @@
 
     <!-- Styles -->
     <link href="{{ asset('/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/style.min.css') }}" rel="stylesheet">
 
     @stack('style')
+
+    <!-- Delaying scripts -->
+    <style>fscript {display: none;}</style>
+    <script>
+        let scriptsExecuted = false;
+        const head = document.getElementsByTagName('head')[0] || document.documentElement;
+        const autoLoad = setTimeout(initScripts, 3000);
+
+        function executeScripts() {
+            var fscripts = document.querySelectorAll('fscript');
+            [].forEach.call(fscripts, function(fscript) {
+                var script = document.createElement('script');
+                script.type = 'text/javascript';
+
+                if (fscript.hasAttributes()) {
+                    for (var attributeKey in fscript.attributes) {
+                        if (fscript.attributes.hasOwnProperty(attributeKey)) {
+                            script[ fscript.attributes[ attributeKey ].name ] = fscript.attributes[ attributeKey ].value || true;
+                        }
+                    }
+                } else {
+                    script.appendChild( document.createTextNode( fscript.innerHTML ) );
+                }
+
+                head.insertBefore( script, head.firstChild );
+            });
+        }
+
+        function initScripts() {
+            if (scriptsExecuted) {
+                return;
+            }
+
+            clearTimeout(autoLoad);
+
+            scriptsExecuted = true;
+
+            setTimeout(function() {
+                if ('requestIdleCallback' in window) {
+                    requestIdleCallback(executeScripts, { timeout: 100 });
+                } else {
+                    executeScripts();
+                }
+            }, 1000);
+        }
+
+        window.addEventListener('scroll', function() {
+            initScripts();
+        }, false);
+
+        document.onclick = function() {
+            initScripts();
+        };
+    </script>
+    <!-- // -->
 
 </head>
 <body class="{{ !empty($body_class) ? $body_class : '' }}">

@@ -71,10 +71,10 @@
     </div>
 </form>
 @push('scripts')
-    <script src="{{ asset('js/validation.min.js') }}" charset="utf-8"></script>
-    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <fscript src="{{ asset('js/validation.min.js') }}" charset="utf-8"></fscript>
+    <fscript src="https://www.google.com/recaptcha/api.js"></fscript>
 
-    <script type="text/javascript">
+    <fscript type="text/javascript">
         $(document).ready(function(){
             $(".validateForm").validationEngine({
                 validateNonVisibleFields: true,
@@ -101,5 +101,5 @@
             }, 1500, 'easeInOutExpo');
         });
         @endif
-    </script>
+    </fscript>
 @endpush
