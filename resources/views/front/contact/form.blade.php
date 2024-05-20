@@ -71,7 +71,7 @@
     </div>
 </form>
 @push('scripts')
-    <fscript src="{{ asset('js/validation.min.js') }}" charset="utf-8"></fscript>
+    <script src="{{ asset('js/validation.min.js') }}" charset="utf-8"></script>
     <fscript src="https://www.google.com/recaptcha/api.js"></fscript>
 
     <script type="text/javascript">
