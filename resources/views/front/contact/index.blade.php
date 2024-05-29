@@ -76,10 +76,9 @@
                                             Godziny otwarcia<br>
                                             poniedziałek-piątek<br>
                                             9:00 - 17:00<br>
-                                            <p class="text-body-emphasis fw-light small mt-3 mb-0 text-pretty">
-                                                To są standardowe godziny otwarcia biura, w razie chęci umówienia spotkania, prosimy o kontakt i
-                                                umówienie wizyty
-                                            </p>
+                                            <p class="text-body-emphasis fw-light small mt-3 mb-0 text-pretty">To są standardowe godziny otwarcia biura, w razie chęci umówienia spotkania, prosimy o kontakt i umówienie wizyty</p>
+
+                                            <p class="text-body-emphasis fw-light small mt-3 mb-0 text-pretty" style="color:red !important;">W dniu 31 maja biuro sprzedaży będzie nieczynne</p>
                                         </div>
                                     </div>
                                 </li>
