@@ -4,31 +4,33 @@
 @endif
 @section('content')
     <main>
-        <section class="position-relative home-hero">
-            <div class="position-absolute top-0 left-0 w-100 h-100 filter-brightness image-wrapper">
-                <img src="{{ asset('images/home_hero.webp') }}" loading="eager" width="1920" height="1048" class="w-100 h-100 object-fit-cover"
-                     srcset="{{ asset('images/home_hero.webp 1920w') }},  {{ asset('images/home_hero_mobile.webp 500w') }}" alt="" />
+        <section class="position-relative home-hero p-0">
+
+            <div class="ratio ratio-16x9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ARUyjjDRRdY?controls=0&autoplay=1&mute=1&loop=1&playlist=ARUyjjDRRdY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
-            <div class="container position-relative z-1">
-                <div class="row">
-                    <div class="col-12 col-md-10 col-lg-8 col-xl-6 offset-md-1 offset-lg-2 offset-xl-3">
-                        <div class="text-center text-white text-content">
-                            <h1>
-                                <span data-aos="fade-up">Beskidzka</span>
-                                <span data-aos="fade-up" data-aos-delay="200">park</span>
-                            </h1>
-                            <p class="text-pretty fs-3 fw-light py-4 py-md-50" data-aos="fade-up" data-aos-delay="400">
-                                TWÓJ ZIELONY ZAKĄTEK ŁODZI
-                            </p>
-                            <a href="/beskidzka-park/#oferta" class="btn btn-primary btn-min-width" data-aos="fade-up"
-                               data-aos-delay="600">
-                                Dostępne domy
-                            </a>
-                        </div>
+
+
+            <div class="home-hero-video h-100 w-100"></div>
+
+            <div class="container position-absolute home-hero-apla d-flex justify-content-center align-items-center">
+                <div class="row w-100">
+                    <div class="text-center text-white text-content">
+                        <h1>
+                            <span data-aos="fade-up">Beskidzka</span>
+                            <span data-aos="fade-up" data-aos-delay="200">park</span>
+                        </h1>
+                        <p class="text-pretty fs-3 fw-light py-4 py-md-50" data-aos="fade-up" data-aos-delay="400">
+                            TWÓJ ZIELONY ZAKĄTEK ŁODZI
+                        </p>
+                        <a href="/beskidzka-park/#oferta" class="btn btn-primary btn-min-width" data-aos="fade-up"
+                           data-aos-delay="600">
+                            Dostępne domy
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="position-absolute bottom-0 start-50 translate-middle-x">
+            <div class="position-absolute bottom-0 start-50 translate-middle-x home-hero-arrow">
                 <a class="rounded-circle bg-white w-60 h-60 d-flex justify-content-center align-items-center scroll-down-button box-shadow-base"
                    href="#w-dol">
                     <img src="{{ asset('images/arrow_down.svg') }}" alt="Przewiń w dół" width="20" height="20" loading="eager" decoding="async" />
