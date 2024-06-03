@@ -13886,6 +13886,13 @@ main>section:last-child{
     right:0%;
     width:104.1666666667%
 }
+
+.home-hero {
+    max-height: calc(100vh - 165px);
+    overflow: hidden;
+}
+
+
 @media(min-width: 1200px){
     .cta-person{
         right:-15%;
@@ -13906,6 +13913,9 @@ main>section:last-child{
     .home-hero-apla .fs-3 {
         font-size: 16px !important;
         padding: 0 !important;
+    }
+    .home-hero {
+        max-height: calc(100vh - 83px);
     }
 }
 @media (max-width: 575.98px) {
