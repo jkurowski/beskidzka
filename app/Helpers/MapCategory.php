@@ -5,23 +5,29 @@ if (! function_exists('mapCategory')) {
     {
         switch ($number) {
             case '1':
-                return "Przedszkola i szkoły podstawowe";
+                return "Inwestycja";
             case '2':
-                return "Transport publiczny";
+                return "Szkoła Podstawowa";
             case '3':
-                return "Wylot na Autostradę A1";
+                return "Przedszkole";
             case '4':
-                return "Tereny rekreacyjne, place zabaw, parki rowerowe";
+                return "Supermarket";
             case '5':
-                return "Gastronomia";
+                return "Przychodnia zdrowia";
             case '6':
-                return "Przychodnie publicznych i prywatne";
+                return "Restauracja";
             case '7':
-                return "Apteki";
+                return "Siłownia";
             case '8':
-                return "Kościoły";
+                return "Apteka";
             case '9':
-                return "Markety, sklepy, drogerie";
+                return "Centrum handlowe";
+            case '10':
+                return "Wjazd na autostradę";
+            case '11':
+                return "Stacja benzynowa";
+            case '12':
+                return "Salon kosmetyczny";
         }
     }
 }

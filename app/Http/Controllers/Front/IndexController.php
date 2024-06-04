@@ -7,6 +7,7 @@ use App\Models\Award;
 use App\Models\Image;
 use App\Models\Inline;
 use App\Models\Investment;
+use App\Models\Map;
 use App\Models\News;
 use App\Models\Review;
 use App\Models\RodoSettings;
@@ -32,6 +33,9 @@ class IndexController extends Controller
         $investments_planned = Investment::whereStatus(3)->get();
 
         $news = News::where('status', 1)->orderBy('date', 'DESC')->limit(5)->get();
+
+        $markers = Map::all();
+
         $array = Inline::getElements(3);
 
         if(settings()->get("popup_status") == "1") {
@@ -60,7 +64,8 @@ class IndexController extends Controller
             'investments_planned',
             'array',
             'isAdmin',
-            'images'
+            'images',
+            'markers'
         ));
     }
 }

@@ -372,13 +372,12 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-xl-7 text-md-end">
-                        <div id="map" class="map text-center" data-aos="fade" data-aos-delay="500">
-                            <img class="img-fluid" src="{{ asset('images/map.png') }}" alt="" width="789" height="344" loading="lazy" decoding="async">
+                        <div id="map" class="map text-center w-100 h-100" data-aos="fade" data-aos-delay="500">
+
                         </div>
                     </div>
                     <div class="col-12 pt-50">
-                        <div
-                                class="row pt-md-20 justify-content-center gy-30 gy-md-50 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-6 text-center text-sm-start">
+                        <div class="row pt-md-20 justify-content-center gy-30 gy-md-50 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-6 text-center text-sm-start">
                             <div class="col">
                                 <div class="d-flex flex-column flex-sm-row gap-3 align-items-center">
                                     <div class="w-60 h-60 rounded-circle with-gradient d-flex justify-content-center align-items-center"
@@ -422,8 +421,7 @@
                                 <div class="d-flex flex-column flex-sm-row gap-3 align-items-center">
                                     <div class="w-60 h-60 rounded-circle with-gradient d-flex justify-content-center align-items-center"
                                          data-aos="entry" style="--color1: #ffee00; --color2: #d9cb00">
-                                        <img src="{{ asset('images/legend_supermarket.svg') }}" alt="" loading="lazy" decoding="async" width="32" height="32"
-                                             class="img-fluid object-fit-contain p-1" />
+                                        <img src="{{ asset('images/legend_supermarket.svg') }}" alt="" loading="lazy" decoding="async" width="32" height="32" class="img-fluid object-fit-contain p-1" />
                                     </div>
                                     <div data-aos="fade" data-aos-delay="500">
                                         <p class="fw-semibold fs-6 mb-1">Supermarket</p>
@@ -578,3 +576,62 @@
         </section>
     </main>
 @endsection
+@push('scripts')
+    <style>
+        .leaflet-marker-icon {
+            border-radius: 50%;
+        }
+    </style>
+    <script src="{{ asset('/js/leaflet.min.js') }}" charset="utf-8"></script>
+    <link href="{{ asset('/css/leaflet.min.css') }}" rel="stylesheet">
+    <script type="text/javascript">
+        const tileLayer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            'attribution': 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+        });
+
+        @foreach($markers as $m)
+        const icon{{ $m->group_id }} = L.icon({
+            iconUrl: '{{ asset('images/mapicons/'.$m->group_id.'.png') }}',
+            shadowUrl: '',
+            iconSize: [40, 40],
+            iconAnchor: [20, 32]
+        });
+        @endforeach
+
+        const featureGroup = L.featureGroup([
+        @foreach($markers as $m)
+            L.marker([{{ $m->lat }}, {{ $m->lng }}], {icon: icon{{ $m->group_id }}}).bindPopup('{{ $m->name }}'),
+        @endforeach
+        ]);
+
+        const mapDiv = document.getElementById("map");
+        let map = new L.Map(mapDiv, {
+            'center': [0, 0],
+            'zoom': 0,
+            'layers': [tileLayer, featureGroup]
+        });
+
+        map.fitBounds(featureGroup.getBounds(), {
+            padding: [50, 50]
+        });
+        map.on('popupclose', function () {
+            map.fitBounds(featureGroup.getBounds(), {
+                padding: [50, 50]
+            });
+        });
+
+        function debounce(func) {
+            let timer;
+            return function (event) {
+                if (timer) clearTimeout(timer);
+                timer = setTimeout(func, 100, event);
+            };
+        }
+
+        window.addEventListener("resize", debounce(function (e) {
+            map.fitBounds(featureGroup.getBounds(), {
+                padding: [50, 50]
+            });
+        }));
+    </script>
+@endpush

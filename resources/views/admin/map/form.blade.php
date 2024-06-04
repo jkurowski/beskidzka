@@ -22,15 +22,18 @@
                             <div class="card-body control-col12">
                                 <div class="row w-100 form-group">
                                     @include('form-elements.html-select', ['label' => 'Kategoria', 'name' => 'group_id', 'selected' => $entry->group_id, 'select' => [
-                                        '1' => 'Przedszkola i szkoły podstawowe',
-                                        '2' => 'Transport publiczny',
-                                        '3' => 'Wylot na Autostradę A1',
-                                        '4' => 'Tereny rekreacyjne, place zabaw, parki rowerowe',
-                                        '5' => 'Gastronomia',
-                                        '6' => 'Przychodnie publicznych i prywatne',
-                                        '7' => 'Apteki',
-                                        '8' => 'Kościoły',
-                                        '9' => 'Markety, sklepy, drogerie'
+                                        '1' => 'Inwestycja',
+                                        '2' => 'Szkoła Podstawowa',
+                                        '3' => 'Przedszkole',
+                                        '4' => 'Supermarket',
+                                        '5' => 'Przychodnia zdrowia',
+                                        '6' => 'Restauracja',
+                                        '7' => 'Siłownia',
+                                        '8' => 'Apteka',
+                                        '9' => 'Centrum handlowe',
+                                        '10' => 'Wjazd na autostradę',
+                                        '11' => 'Stacja benzynowa',
+                                        '12' => 'Salon kosmetyczny'
                                     ]])
                                 </div>
                                 <div class="row w-100 form-group">
