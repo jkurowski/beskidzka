@@ -15070,3 +15070,58 @@ main>section:last-child{
 [data-aos=flip-down].aos-animate{
     transform:perspective(2500px) rotateX(0)
 }
+/* Social
+================================================== */
+#widget{position:fixed;bottom:0;top:0;margin:auto;z-index:100;right:0;display: flex; align-items: center}
+#widget ul{list-style:none outside none;margin:0;padding:0}
+#widget li{margin-top:1px}
+#widget a{color:#fff;display:block;font-size:28px;height:55px;line-height:56px;position:relative;text-align:center;width:55px}
+#widget a:hover{color:#fff}
+#widget a:before{font-family:"FontAwesome";font-style:normal;font-variant:normal;font-weight:normal;line-height:1;text-align:center;text-transform:none}
+#widget a span{right:-600%;font-size:15px;height:inherit;line-height:35px;margin-left:-5px;min-width:146px;width:auto}
+#widget a span:before{right:-4px}
+#widget a span{width:0;-webkit-transition:opacity .3s,left .4s,right .4s,top .4s,bottom .4s;-moz-transition:opacity .3s,left .4s,right .4s,top .4s,bottom .4s;-ms-transition:opacity .3s,left .4s,right .4s,top .4s,bottom .4s;-o-transition:opacity .3s,left .4s,right .4s,top .4s,bottom .4s;transition:opacity .3s,left .4s,right .4s,top .4s,bottom .4s,width .4s;-ms-filter:"alpha(opacity=0)";filter:alpha(opacity=0);white-space:nowrap;opacity:0;position:absolute;z-index:-1;color:white;font-size:15px;line-height:56px}
+#widget a:hover span{right:100%;opacity:1;-ms-filter:"alpha(opacity=1)";filter:alpha(opacity=1);margin-right:-5px;padding:0 13px 0 15px;-webkit-border-radius:5px 0 0 5px;-moz-border-radius:5px 0 0 5px;border-radius:5px 0 0 5px}
+.Facebook,.Facebook span{background:#234999}
+.Facebook:before{content:"\f09a"}
+.Shield,.Shield span{background:#b1844b}
+.Shield:before{font-family:'Line Awesome Free' !important;font-weight:900 !important;content:"\f004"}
+#widget a.Shield span {
+    min-width: 186px;
+}
+.Instagram span {background: #a239a9}
+.Instagram {
+    background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+}
+.Instagram:before{content:"\f16d"}
+.Phone,.Phone span{background:#f58125}
+.Phone:before{content:"\f095"}
+.GPlus,.GPlus span{background:#e34429}
+.GPlus:before{content:"\f0d5"}
+.Youtube,.Youtube span{background:#cd181f}
+.Youtube:before{content:"\f16a"}
+.Twitter,.Twitter span{background:#00abf0}
+.Twitter:before{content:"\f099"}
+#widget {
+    i {
+        width: 20px;
+        height: 20px;
+        background: red;
+        border-radius: 50%;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 11px;
+        margin-left: 5px;
+        position: absolute;
+        top: -6px;
+        right: 2px;
+        font-style: normal;
+        line-height: normal;
+    }
+}
+/* Fonty
+================================================== */
+@font-face{font-family:'FontAwesome';src:url('../fonts/fontawesome-webfont.eot');src:url('../fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/fontawesome-webfont.woff') format('woff'),url('../fonts/fontawesome-webfont.ttf') format('truetype'),url('../fonts/fontawesome-webfont.svg#fontawesomeregular') format('svg');font-weight:normal;font-style:normal}
+.fa-icons:before, .fa-icons:after { display: inline-block; font-family: "FontAwesome"; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; text-rendering: auto; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
