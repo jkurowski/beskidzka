@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Front\Developro;
 
 use App\Http\Controllers\Controller;
 use App\Models\Investment;
+use App\Models\Map;
 use Illuminate\Http\Request;
 
 // CMS
@@ -51,9 +52,12 @@ class InvestmentController extends Controller
 //            'uniqueRooms' => $this->repository->getUniqueRooms($investment_room->properties),
 //            'page' => $page
 //        ]);
+
+        $markers = Map::all();
         return view('front.developro.investment.index', [
             'investment' => $investment,
-            'page' => $page
+            'page' => $page,
+            'markers' => $markers
         ]);
     }
 }
