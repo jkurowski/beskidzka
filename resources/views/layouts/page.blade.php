@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    {!! settings()->get("scripts_head") !!}
+
 
     <title>@hasSection('seo_title')@yield('seo_title')@else{{ settings()->get("page_title") }} - @yield('meta_title')@endif</title>
 
@@ -81,7 +81,7 @@
         };
     </script>
     <!-- // -->
-
+    {!! settings()->get("scripts_head") !!}
 </head>
 <body class="{{ !empty($body_class) ? $body_class : '' }}">
 {!! settings()->get("scripts_afterbody") !!}
