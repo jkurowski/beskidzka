@@ -62,6 +62,9 @@
                                             <a class="nav-link link-hover-primary" href="#o-inwestycji">O inwestycji</a>
                                         </li>
                                         <li class="nav-item ">
+                                            <a class="nav-link link-hover-primary" href="#lokalizacja">Lokalizacja</a>
+                                        </li>
+                                        <li class="nav-item ">
                                             <a class="nav-link link-hover-primary" href="#oferta">Wybierz dom</a>
                                         </li>
                                         <li class="nav-item ">
@@ -70,6 +73,9 @@
                                     @else
                                         <li class="nav-item ">
                                             <a class="nav-link link-hover-primary" href="/beskidzka-park/#o-inwestycji">O inwestycji</a>
+                                        </li>
+                                        <li class="nav-item ">
+                                            <a class="nav-link link-hover-primary" href="/beskidzka-park/#lokalizacja">Lokalizacja</a>
                                         </li>
                                         <li class="nav-item ">
                                             <a class="nav-link link-hover-primary" href="/beskidzka-park/#oferta">Wybierz dom</a>
@@ -81,6 +87,9 @@
                                 @else
                                     <li class="nav-item ">
                                         <a class="nav-link link-hover-primary" href="/beskidzka-park/#o-inwestycji">O inwestycji</a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a class="nav-link link-hover-primary" href="/beskidzka-park/#lokalizacja">Lokalizacja</a>
                                     </li>
                                     <li class="nav-item ">
                                         <a class="nav-link link-hover-primary" href="/beskidzka-park/#oferta">Wybierz dom</a>
