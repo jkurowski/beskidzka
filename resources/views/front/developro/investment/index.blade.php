@@ -230,6 +230,201 @@
             </div>
         </section>
 
+        <section id="lokalizacja">
+            <div class="container">
+                <div class="row gy-30 text-center text-md-start">
+                    <div class="col-12 col-md-6 col-xl-5">
+                        <h2 class="mb-4 mb-lg-40 mb-xl-60">
+                            <span data-aos="fade">Lokalizacja</span>
+                            <span data-aos="fade" data-aos-delay="300">Inwestycji</span>
+                        </h2>
+                        <div class="text-pretty">
+                            <p class="fw-medium" data-aos="fade">
+                                Osiedle Beskidzka Park położone jest 15 minut od centrum
+                                Łodzi, 10 minut od autostrady A1.
+                            </p>
+                            <p class="fw-light" data-aos="fade">
+                                W sąsiedztwie terenów zielonych z licznymi ścieżkami rowerowymi i terenami do spacerów po Wzniesieniach
+                                Łódzkich.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-7 text-md-end">
+                        <div id="map" class="map text-center w-100 h-100" data-aos="fade" data-aos-delay="500">
+
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div
+                                class="row justify-content-center gy-30 gy-md-50 row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-6 text-center text-sm-start">
+                            <div class="col">
+                                <div class="d-flex flex-column flex-sm-row gap-3 align-items-center">
+                                    <div class="w-60 h-60 rounded-circle with-gradient d-flex justify-content-center align-items-center"
+                                         data-aos="entry" style="--color1: #eb0000; --color2: #ba0606">
+                                        <img src="{{ asset('images/legend_silownia.svg') }}" alt="" loading="lazy" decoding="async" width="32" height="32"
+                                             class="img-fluid object-fit-contain p-1" />
+                                    </div>
+                                    <div data-aos="fade" data-aos-delay="500">
+                                        <p class="fw-semibold fs-6 mb-1">Siłownia</p>
+                                        <p class="fw-light mb-0">1 minuta</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="d-flex flex-column flex-sm-row gap-3 align-items-center">
+                                    <div class="w-60 h-60 rounded-circle with-gradient d-flex justify-content-center align-items-center"
+                                         data-aos="entry" style="--color1: #a749f8; --color2: #6a009e">
+                                        <img src="{{ asset('images/legend_apteka.svg') }}" alt="" loading="lazy" decoding="async" width="32" height="32"
+                                             class="img-fluid object-fit-contain p-1" />
+                                    </div>
+                                    <div data-aos="fade" data-aos-delay="500">
+                                        <p class="fw-semibold fs-6 mb-1">Apteka</p>
+                                        <p class="fw-light mb-0">1 minuta</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="d-flex flex-column flex-sm-row gap-3 align-items-center">
+                                    <div class="w-60 h-60 rounded-circle with-gradient d-flex justify-content-center align-items-center"
+                                         data-aos="entry" style="--color1: #04fedc; --color2: #12b9ba">
+                                        <img src="{{ asset('images/legend_przychodnia.svg') }}" alt="" loading="lazy" decoding="async" width="32" height="32"
+                                             class="img-fluid object-fit-contain p-1" />
+                                    </div>
+                                    <div data-aos="fade" data-aos-delay="500">
+                                        <p class="fw-semibold fs-6 mb-1">Przychodnia</p>
+                                        <p class="fw-light mb-0">2 minuta</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="d-flex flex-column flex-sm-row gap-3 align-items-center">
+                                    <div class="w-60 h-60 rounded-circle with-gradient d-flex justify-content-center align-items-center"
+                                         data-aos="entry" style="--color1: #ffee00; --color2: #d9cb00">
+                                        <img src="{{ asset('images/legend_supermarket.svg') }}" alt="" loading="lazy" decoding="async" width="32" height="32"
+                                             class="img-fluid object-fit-contain p-1" />
+                                    </div>
+                                    <div data-aos="fade" data-aos-delay="500">
+                                        <p class="fw-semibold fs-6 mb-1">Supermarket</p>
+                                        <p class="fw-light mb-0">1 minuta</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="d-flex flex-column flex-sm-row gap-3 align-items-center">
+                                    <div class="w-60 h-60 rounded-circle with-gradient d-flex justify-content-center align-items-center"
+                                         data-aos="entry" style="--color1: #00c2ff; --color2: #00ffff">
+                                        <img src="{{ asset('images/legend_przedszkole.svg') }}" alt="" loading="lazy" decoding="async" width="32" height="32"
+                                             class="img-fluid object-fit-contain p-1" />
+                                    </div>
+                                    <div data-aos="fade" data-aos-delay="500">
+                                        <p class="fw-semibold fs-6 mb-1">Przedszkole</p>
+                                        <p class="fw-light mb-0">1 minuta</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="d-flex flex-column flex-sm-row gap-3 align-items-center">
+                                    <div class="w-60 h-60 rounded-circle with-gradient d-flex justify-content-center align-items-center"
+                                         data-aos="entry" style="--color1: #dfdfdf; --color2: #818181">
+                                        <img src="{{ asset('images/legend_autostrada.svg') }}" alt="" loading="lazy" decoding="async" width="32" height="32"
+                                             class="img-fluid object-fit-contain p-1" />
+                                    </div>
+                                    <div data-aos="fade" data-aos-delay="500">
+                                        <p class="fw-semibold fs-6 mb-1">Autostrada</p>
+                                        <p class="fw-light mb-0">4 minuty</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="d-flex flex-column flex-sm-row gap-3 align-items-center">
+                                    <div class="w-60 h-60 rounded-circle with-gradient d-flex justify-content-center align-items-center"
+                                         data-aos="entry" style="--color1: #fbbde0; --color2: #d47cbc">
+                                        <img src="{{ asset('images/legend_salon_kosmetyczny.svg') }}" alt="" loading="lazy" decoding="async" width="32"
+                                             height="32" class="img-fluid object-fit-contain p-1" />
+                                    </div>
+                                    <div data-aos="fade" data-aos-delay="500">
+                                        <p class="fw-semibold fs-6 mb-1">Salon kosmetyczny</p>
+                                        <p class="fw-light mb-0">1 minuta</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="d-flex flex-column flex-sm-row gap-3 align-items-center">
+                                    <div class="w-60 h-60 rounded-circle with-gradient d-flex justify-content-center align-items-center"
+                                         data-aos="entry" style="--color1: #5f9100; --color2: #2f4700">
+                                        <img src="{{ asset('images/legend_szkola_podstawowa.svg') }}" alt="" loading="lazy" decoding="async" width="32"
+                                             height="32" class="img-fluid object-fit-contain p-1" />
+                                    </div>
+                                    <div data-aos="fade" data-aos-delay="500">
+                                        <p class="fw-semibold fs-6 mb-1">Szkoła podstawowa</p>
+                                        <p class="fw-light mb-0">1 minuta</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="d-flex flex-column flex-sm-row gap-3 align-items-center">
+                                    <div class="w-60 h-60 rounded-circle with-gradient d-flex justify-content-center align-items-center"
+                                         data-aos="entry" style="--color1: #ffe600; --color2: #ffbb33">
+                                        <img src="{{ asset('images/legend_spozywczy.svg') }}" alt="" loading="lazy" decoding="async" width="32" height="32"
+                                             class="img-fluid object-fit-contain p-1" />
+                                    </div>
+                                    <div data-aos="fade" data-aos-delay="500">
+                                        <p class="fw-semibold fs-6 mb-1">Sklep spożywczy</p>
+                                        <p class="fw-light mb-0">1 minuta</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="d-flex flex-column flex-sm-row gap-3 align-items-center">
+                                    <div class="w-60 h-60 rounded-circle with-gradient d-flex justify-content-center align-items-center"
+                                         data-aos="entry" style="--color1: #a86604; --color2: #4b351b">
+                                        <img src="{{ asset('images/legend_stacja.svg') }}" alt="" loading="lazy" decoding="async" width="32" height="32"
+                                             class="img-fluid object-fit-contain p-1" />
+                                    </div>
+                                    <div data-aos="fade" data-aos-delay="500">
+                                        <p class="fw-semibold fs-6 mb-1">Stacja benzynowa</p>
+                                        <p class="fw-light mb-0">1 minuta</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="d-flex flex-column flex-sm-row gap-3 align-items-center">
+                                    <div class="w-60 h-60 rounded-circle with-gradient d-flex justify-content-center align-items-center"
+                                         data-aos="entry" style="
+                        --color1: #eb0000;
+                        --color2: #ffc400;
+                        --rotation: 45deg;
+                      ">
+                                        <img src="{{ asset('images/legend_centrum.svg') }}" alt="" loading="lazy" decoding="async" width="32" height="32"
+                                             class="img-fluid object-fit-contain p-1" />
+                                    </div>
+                                    <div data-aos="fade" data-aos-delay="500">
+                                        <p class="fw-semibold fs-6 mb-1">Centrum handlowe M1</p>
+                                        <p class="fw-light mb-0">1 minuta</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="d-flex flex-column flex-sm-row gap-3 align-items-center">
+                                    <div class="w-60 h-60 rounded-circle with-gradient d-flex justify-content-center align-items-center"
+                                         data-aos="entry" style="--color1: #b2ff1d; --color2: #79a12d">
+                                        <img src="{{ asset('images/legend_przychodnia_wet.svg') }}" alt="" loading="lazy" decoding="async" width="32"
+                                             height="32" class="img-fluid object-fit-contain p-1" />
+                                    </div>
+                                    <div data-aos="fade" data-aos-delay="500">
+                                        <p class="fw-semibold fs-6 mb-1">
+                                            Przychodnia Weterynaryjna
+                                        </p>
+                                        <p class="fw-light mb-0">1 minuta</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="oferta">
             <div class="container">
                 <div class="row gy-20 text-center">
@@ -642,200 +837,7 @@
             </div>
         </section>
 
-        <section id="lokalizacja">
-            <div class="container">
-                <div class="row gy-30 text-center text-md-start">
-                    <div class="col-12 col-md-6 col-xl-5">
-                        <h2 class="mb-4 mb-lg-40 mb-xl-60">
-                            <span data-aos="fade">Lokalizacja</span>
-                            <span data-aos="fade" data-aos-delay="300">Inwestycji</span>
-                        </h2>
-                        <div class="text-pretty">
-                            <p class="fw-medium" data-aos="fade">
-                                Osiedle Beskidzka Park położone jest 15 minut od centrum
-                                Łodzi, 10 minut od autostrady A1.
-                            </p>
-                            <p class="fw-light" data-aos="fade">
-                                W sąsiedztwie terenów zielonych z licznymi ścieżkami rowerowymi i terenami do spacerów po Wzniesieniach
-                                Łódzkich.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-xl-7 text-md-end">
-                        <div id="map" class="map text-center w-100 h-100" data-aos="fade" data-aos-delay="500">
 
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div
-                                class="row justify-content-center gy-30 gy-md-50 row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-6 text-center text-sm-start">
-                            <div class="col">
-                                <div class="d-flex flex-column flex-sm-row gap-3 align-items-center">
-                                    <div class="w-60 h-60 rounded-circle with-gradient d-flex justify-content-center align-items-center"
-                                         data-aos="entry" style="--color1: #eb0000; --color2: #ba0606">
-                                        <img src="{{ asset('images/legend_silownia.svg') }}" alt="" loading="lazy" decoding="async" width="32" height="32"
-                                             class="img-fluid object-fit-contain p-1" />
-                                    </div>
-                                    <div data-aos="fade" data-aos-delay="500">
-                                        <p class="fw-semibold fs-6 mb-1">Siłownia</p>
-                                        <p class="fw-light mb-0">1 minuta</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="d-flex flex-column flex-sm-row gap-3 align-items-center">
-                                    <div class="w-60 h-60 rounded-circle with-gradient d-flex justify-content-center align-items-center"
-                                         data-aos="entry" style="--color1: #a749f8; --color2: #6a009e">
-                                        <img src="{{ asset('images/legend_apteka.svg') }}" alt="" loading="lazy" decoding="async" width="32" height="32"
-                                             class="img-fluid object-fit-contain p-1" />
-                                    </div>
-                                    <div data-aos="fade" data-aos-delay="500">
-                                        <p class="fw-semibold fs-6 mb-1">Apteka</p>
-                                        <p class="fw-light mb-0">1 minuta</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="d-flex flex-column flex-sm-row gap-3 align-items-center">
-                                    <div class="w-60 h-60 rounded-circle with-gradient d-flex justify-content-center align-items-center"
-                                         data-aos="entry" style="--color1: #04fedc; --color2: #12b9ba">
-                                        <img src="{{ asset('images/legend_przychodnia.svg') }}" alt="" loading="lazy" decoding="async" width="32" height="32"
-                                             class="img-fluid object-fit-contain p-1" />
-                                    </div>
-                                    <div data-aos="fade" data-aos-delay="500">
-                                        <p class="fw-semibold fs-6 mb-1">Przychodnia</p>
-                                        <p class="fw-light mb-0">2 minuta</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="d-flex flex-column flex-sm-row gap-3 align-items-center">
-                                    <div class="w-60 h-60 rounded-circle with-gradient d-flex justify-content-center align-items-center"
-                                         data-aos="entry" style="--color1: #ffee00; --color2: #d9cb00">
-                                        <img src="{{ asset('images/legend_supermarket.svg') }}" alt="" loading="lazy" decoding="async" width="32" height="32"
-                                             class="img-fluid object-fit-contain p-1" />
-                                    </div>
-                                    <div data-aos="fade" data-aos-delay="500">
-                                        <p class="fw-semibold fs-6 mb-1">Supermarket</p>
-                                        <p class="fw-light mb-0">1 minuta</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="d-flex flex-column flex-sm-row gap-3 align-items-center">
-                                    <div class="w-60 h-60 rounded-circle with-gradient d-flex justify-content-center align-items-center"
-                                         data-aos="entry" style="--color1: #00c2ff; --color2: #00ffff">
-                                        <img src="{{ asset('images/legend_przedszkole.svg') }}" alt="" loading="lazy" decoding="async" width="32" height="32"
-                                             class="img-fluid object-fit-contain p-1" />
-                                    </div>
-                                    <div data-aos="fade" data-aos-delay="500">
-                                        <p class="fw-semibold fs-6 mb-1">Przedszkole</p>
-                                        <p class="fw-light mb-0">1 minuta</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="d-flex flex-column flex-sm-row gap-3 align-items-center">
-                                    <div class="w-60 h-60 rounded-circle with-gradient d-flex justify-content-center align-items-center"
-                                         data-aos="entry" style="--color1: #dfdfdf; --color2: #818181">
-                                        <img src="{{ asset('images/legend_autostrada.svg') }}" alt="" loading="lazy" decoding="async" width="32" height="32"
-                                             class="img-fluid object-fit-contain p-1" />
-                                    </div>
-                                    <div data-aos="fade" data-aos-delay="500">
-                                        <p class="fw-semibold fs-6 mb-1">Autostrada</p>
-                                        <p class="fw-light mb-0">4 minuty</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="d-flex flex-column flex-sm-row gap-3 align-items-center">
-                                    <div class="w-60 h-60 rounded-circle with-gradient d-flex justify-content-center align-items-center"
-                                         data-aos="entry" style="--color1: #fbbde0; --color2: #d47cbc">
-                                        <img src="{{ asset('images/legend_salon_kosmetyczny.svg') }}" alt="" loading="lazy" decoding="async" width="32"
-                                             height="32" class="img-fluid object-fit-contain p-1" />
-                                    </div>
-                                    <div data-aos="fade" data-aos-delay="500">
-                                        <p class="fw-semibold fs-6 mb-1">Salon kosmetyczny</p>
-                                        <p class="fw-light mb-0">1 minuta</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="d-flex flex-column flex-sm-row gap-3 align-items-center">
-                                    <div class="w-60 h-60 rounded-circle with-gradient d-flex justify-content-center align-items-center"
-                                         data-aos="entry" style="--color1: #5f9100; --color2: #2f4700">
-                                        <img src="{{ asset('images/legend_szkola_podstawowa.svg') }}" alt="" loading="lazy" decoding="async" width="32"
-                                             height="32" class="img-fluid object-fit-contain p-1" />
-                                    </div>
-                                    <div data-aos="fade" data-aos-delay="500">
-                                        <p class="fw-semibold fs-6 mb-1">Szkoła podstawowa</p>
-                                        <p class="fw-light mb-0">1 minuta</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="d-flex flex-column flex-sm-row gap-3 align-items-center">
-                                    <div class="w-60 h-60 rounded-circle with-gradient d-flex justify-content-center align-items-center"
-                                         data-aos="entry" style="--color1: #ffe600; --color2: #ffbb33">
-                                        <img src="{{ asset('images/legend_spozywczy.svg') }}" alt="" loading="lazy" decoding="async" width="32" height="32"
-                                             class="img-fluid object-fit-contain p-1" />
-                                    </div>
-                                    <div data-aos="fade" data-aos-delay="500">
-                                        <p class="fw-semibold fs-6 mb-1">Sklep spożywczy</p>
-                                        <p class="fw-light mb-0">1 minuta</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="d-flex flex-column flex-sm-row gap-3 align-items-center">
-                                    <div class="w-60 h-60 rounded-circle with-gradient d-flex justify-content-center align-items-center"
-                                         data-aos="entry" style="--color1: #a86604; --color2: #4b351b">
-                                        <img src="{{ asset('images/legend_stacja.svg') }}" alt="" loading="lazy" decoding="async" width="32" height="32"
-                                             class="img-fluid object-fit-contain p-1" />
-                                    </div>
-                                    <div data-aos="fade" data-aos-delay="500">
-                                        <p class="fw-semibold fs-6 mb-1">Stacja benzynowa</p>
-                                        <p class="fw-light mb-0">1 minuta</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="d-flex flex-column flex-sm-row gap-3 align-items-center">
-                                    <div class="w-60 h-60 rounded-circle with-gradient d-flex justify-content-center align-items-center"
-                                         data-aos="entry" style="
-                        --color1: #eb0000;
-                        --color2: #ffc400;
-                        --rotation: 45deg;
-                      ">
-                                        <img src="{{ asset('images/legend_centrum.svg') }}" alt="" loading="lazy" decoding="async" width="32" height="32"
-                                             class="img-fluid object-fit-contain p-1" />
-                                    </div>
-                                    <div data-aos="fade" data-aos-delay="500">
-                                        <p class="fw-semibold fs-6 mb-1">Centrum handlowe M1</p>
-                                        <p class="fw-light mb-0">1 minuta</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="d-flex flex-column flex-sm-row gap-3 align-items-center">
-                                    <div class="w-60 h-60 rounded-circle with-gradient d-flex justify-content-center align-items-center"
-                                         data-aos="entry" style="--color1: #b2ff1d; --color2: #79a12d">
-                                        <img src="{{ asset('images/legend_przychodnia_wet.svg') }}" alt="" loading="lazy" decoding="async" width="32"
-                                             height="32" class="img-fluid object-fit-contain p-1" />
-                                    </div>
-                                    <div data-aos="fade" data-aos-delay="500">
-                                        <p class="fw-semibold fs-6 mb-1">
-                                            Przychodnia Weterynaryjna
-                                        </p>
-                                        <p class="fw-light mb-0">1 minuta</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <section id="investContact">
             <div class="container">
