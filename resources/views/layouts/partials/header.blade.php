@@ -101,6 +101,9 @@
                             </ul>
                         </li>
                         <!-- Dropdown @end -->
+                        <li class="nav-item @isset($page) @if($page->slug == 'promocja') active @endif @endisset">
+                            <a class="nav-link link-hover-primary" href="/promocja/">Promocja</a>
+                        </li>
                         <li class="nav-item @isset($page) @if($page->slug == 'finansowanie') active @endif @endisset">
                             <a class="nav-link link-hover-primary" href="/finansowanie/">Finansowanie</a>
                         </li>

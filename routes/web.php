@@ -41,6 +41,7 @@ Route::group(['namespace' => 'Front', 'middleware' => 'restrictIp', 'as' => 'fro
     Route::get('/', 'IndexController@index')->name('index');
 
     // Static pages
+
     Route::get('/finansowanie', 'Static\IndexController@finansowanie')->name('static.finansowanie');
     Route::get('/o-nas', 'Static\IndexController@about')->name('static.about');
 
@@ -56,10 +57,13 @@ Route::group(['namespace' => 'Front', 'middleware' => 'restrictIp', 'as' => 'fro
     });
 
     // DeveloPro
+    Route::get('/promocja', 'PromotionController@index')->name('investment.promocja');
     Route::group(['namespace' => 'Developro', 'as' => 'developro.'], function () {
         Route::get('/beskidzka-park', 'InvestmentController@index')->name('investment.index');
         Route::get('i/kontakt', 'Contact\IndexController@index')->name('investment.contact');
         Route::post('i/kontakt', 'Contact\IndexController@form')->name('investment.contact.form');
         Route::get('/d/{property}', 'InvestmentHouseController@index')->name('house.index');
+
+        
     });
 });
