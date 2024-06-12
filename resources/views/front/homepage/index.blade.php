@@ -6,7 +6,7 @@
     <main>
         <section class="position-relative home-hero p-0">
 
-            <div class="ratio ratio-16x9">
+            <div class="ratio ratio-16x9 ratio-off-lg-down">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/ARUyjjDRRdY?controls=0&autoplay=1&mute=1&loop=1&playlist=ARUyjjDRRdY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
 
@@ -20,7 +20,7 @@
                             <span data-aos="fade-up">Beskidzka</span>
                             <span data-aos="fade-up" data-aos-delay="200">park</span>
                         </h1>
-                        <p class="text-pretty fs-3 fw-light py-4 py-md-50" data-aos="fade-up" data-aos-delay="400">
+                        <p class="text-pretty fs-3 fw-light py-4 " data-aos="fade-up" data-aos-delay="400">
                             TWÓJ ZIELONY ZAKĄTEK ŁODZI
                         </p>
                         <a href="/beskidzka-park/#oferta" class="btn btn-primary btn-min-width" data-aos="fade-up"
