@@ -377,7 +377,7 @@
                         </div>
                     </div>
                     <div class="col-12 pt-50">
-                        <div class="row pt-md-20 justify-content-center gy-30 gy-md-50 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-6 text-center text-sm-start">
+                        <div class="row pt-md-20 justify-content-center gy-30 gy-md-50 row-cols-2  row-cols-md-3 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-6 text-center text-sm-start">
                             <div class="col">
                                 <div class="d-flex flex-column flex-sm-row gap-3 align-items-center">
                                     <div class="w-60 h-60 rounded-circle with-gradient d-flex justify-content-center align-items-center"
