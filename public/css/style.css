@@ -15144,3 +15144,7 @@ main>section:last-child{
         transform: scale(3)
     }
 }
+
+#map {
+    min-height: 400px;
+}
