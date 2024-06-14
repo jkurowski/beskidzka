@@ -13423,13 +13423,15 @@ header.scrolled .navbar{
         width:2px;
         height:15px
     }
+    .dropdown:hover .dropdown-menu{
+        display:block
+    }
 }
 .dropdown .nav-item a::after{
     content:unset !important
 }
-.dropdown:hover .dropdown-menu{
-    display:block
-}
+
+
 @media(max-width: 1399.98px){
     .header-logo{
         width:10.1041666667vw;
