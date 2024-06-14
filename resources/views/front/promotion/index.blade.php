@@ -174,7 +174,7 @@
                                                             850 000 zł
                                                         </span>
                                                         <span class="d-block">
-                                                            tylko w przedsprzedaży 799 000 zł
+                                                            tylko w przedsprzedaży <span class="text-nowrap">799 000 zł</span>
                                                         </span>
                                                         <span class="d-block fw-semibold">
                                                             rabat AŻ 51 000 zł
@@ -190,7 +190,7 @@
                                         {!! roomStatusBadge($house->status) !!}
                                         @if ($house->file)
                                             <a class="stretched-link"
-                                                href="{{ route('front.developro.house.index', ['property' => $house]) }}">
+                                                href="{{ route('front.developro.investment.index') }}/#oferta">
 
                                             </a>
                                         @endif
