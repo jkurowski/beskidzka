@@ -21,10 +21,13 @@
             <div class="container">
                 <div class="row gy-30 text-center text-md-start">
                     <div class="col-12 col-md-6 col-xl-5">
-                        <h1 class="h2 mb-4 mb-lg-40 mb-xl-60">
+                        <h1 class="h2">
                             <span data-aos="fade">Pakiet korzyści</span>
-                            <span data-aos="fade" data-aos-delay="300">Expander</span>
+                            <span data-aos="fade" data-aos-delay="300" class="d-none hidden">Expander</span>
                         </h1>
+                        <div class="col-4 mb-4 mb-lg-40 mb-xl-60 mx-auto mx-md-0">
+                            <img src="{{ asset('images/expander_logo.png')}}" alt="" width="478" height="124" class="img-fluid" loading="eager">
+                        </div>
                         <div class="text-pretty">
                             <p class="fw-medium " data-aos="fade">
                                 Odbierz zwrot 0,4%
@@ -43,8 +46,19 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-xl-5 offset-xl-2 text-md-end">
-                        <img src="{{ asset('images/expander_logo.png')}}" alt="" width="750" height="200" class="img-fluid" loading="eager">
+
+                </div>
+            </div>
+        </section>
+
+        <section class="pb-0">
+            <div class="container">
+                <div class="row gy-30 text-center text-md-start">
+                    <div class="col-12 text-center">
+                        <h2 class="h2">
+                            <span data-aos="fade">Domy w promocji</span>
+                            <span data-aos="fade" data-aos-delay="300">Beskidzka Park</span>
+                        </h2>
                     </div>
                 </div>
             </div>
