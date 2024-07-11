@@ -52,6 +52,9 @@
         <section class="bg-white">
             <div class="container">
                 <div class="row">
+                    <div class="col-10 offset-1 col-sm-6 offset-sm-3 col-md-4 offset-md-4">
+                        <img src="{{ asset('images/expander_logo.png')}}" alt='' width="2865" height="1100" class="img-fluid" loading="eager" data-aos="fade" />
+                    </div>
                     <div class="col-12">
                         <div class="containerFrameCalc">
                             <iframe class="responsive-iframeCalc" src="https://expander.pl/kalkulator-zdolnosci-szablon/?vid=766323cc-3ef2-40d8-b85b-34fb16556386" frameborder="0"></iframe>
