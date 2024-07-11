@@ -74,6 +74,14 @@
                                     <span class="bullet bullet-dot"></span>
                                 </span> Slider</a>
                         </li>
+
+                        <li {{ Request::routeIs('admin.map.*') ? 'class=active' : '' }}>
+                            <a href="{{ route('admin.map.index') }}">
+                                <span class="menu-bullet">
+                                    <span class="bullet bullet-dot"></span>
+                                </span> Mapa</a>
+                        </li>
+
                         <li class="d-none">
                             <a href="">
                                 <span class="menu-bullet">

@@ -81,7 +81,6 @@
         };
     </script>
     <!-- // -->
-
 </head>
 <body class="{{ !empty($body_class) ? $body_class : '' }}">
 {!! settings()->get("scripts_afterbody") !!}
