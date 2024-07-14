@@ -36,8 +36,7 @@
                                 standardem, nie przywilejem.
                             </p>
                             <p class="fw-light" data-aos="fade">
-                                Specjalizujemy się w tworzeniu wysokiej jakości, mieszkań, bliźniaków i domów, które są
-                                będą dostępne dla szerszej grupy odbiorców. Nasze projekty, takie jak flagowa inwestycja
+                                Specjalizujemy się w tworzeniu wysokiej jakości, mieszkań, bliźniaków i domów, które są dostępne dla szerszej grupy odbiorców. Nasze projekty, takie jak flagowa inwestycja
                                 <strong>Beskidzka Park</strong>, łączą nowoczesność z ekologicznymi rozwiązaniami,
                                 zapewniając komfortowe
                                 przestrzenie życiowe w pełnej harmonii z naturą.
@@ -94,8 +93,7 @@
                                 wodą to standard w naszych projektach.
                             </p>
                             <p class="fw-light" data-aos="fade">
-                                Specjalizujemy się w tworzeniu wysokiej jakości, mieszkań, bliźniaków i domów, które są
-                                będą dostępne dla szerszej grupy odbiorców. Nasze projekty, takie jak flagowa inwestycja
+                                Specjalizujemy się w tworzeniu wysokiej jakości, mieszkań, bliźniaków i domów, które są dostępne dla szerszej grupy odbiorców. Nasze projekty, takie jak flagowa inwestycja
                                 <strong>Beskidzka Park</strong>, łączą nowoczesność z ekologicznymi rozwiązaniami,
                                 zapewniając komfortowe
                                 przestrzenie życiowe w pełnej harmonii z naturą.
