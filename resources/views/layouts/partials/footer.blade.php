@@ -41,14 +41,14 @@
                 <ul class="list-unstyled">
                     <li class="pb-3">
                         <a class="link-white fw-medium d-inline-flex gap-2 justify-content-center align-items-center"
-                           href="tel:+48536882090">
+                           href="tel:+48731 547 417">
                             <svg xmlns="http://www.w3.org/2000/svg" width="15.573" height="15.574" viewBox="0 0 15.573 15.574"
                                  stroke="currentColor">
                                 <path id="tel_icon"
                                       d="M14.146,10.29,10.96,8.925a.683.683,0,0,0-.8.2L8.753,10.844A10.541,10.541,0,0,1,3.714,5.805L5.438,4.394a.681.681,0,0,0,.2-.8L4.269.413a.687.687,0,0,0-.782-.4L.529.7A.683.683,0,0,0,0,1.365a13.2,13.2,0,0,0,13.2,13.2.683.683,0,0,0,.665-.529l.683-2.958A.691.691,0,0,0,14.146,10.29Z"
                                       transform="translate(0.5 0.512)" fill="none" stroke="currentColor" stroke-width="1" />
                             </svg>
-                            <span> 536 882 090 </span>
+                            <span> 731 547 417 </span>
                         </a>
                     </li>
                     <li>
