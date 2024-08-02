@@ -74,7 +74,7 @@
                                     </div>
                                 </li>
                             </ul>
-                            <p class="fw-semibold pb-4 mb-0 fs-5">Biuro sprzedaży na inwestycji</p>
+                            <p class="fw-semibold pb-4 mb-0 fs-5">Biuro sprzedaży <br>na inwestycji</p>
                             <ul class="list-unstyled ">
                                 <li class="pb-3">
                                     <div class="d-inline-flex gap-2 justify-content-center align-items-start">
