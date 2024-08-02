@@ -69,11 +69,12 @@
                                             Godziny otwarcia<br>
                                             poniedziałek-piątek<br>
                                             9:00 - 17:00<br>
-                                            <p class="text-body-emphasis fw-light small mt-3 mb-0 text-pretty">To są standardowe godziny otwarcia biura, w razie chęci umówienia spotkania, prosimy o kontakt i umówienie wizyty</p>
+                                            <p class="text-body-emphasis fw-light small mt-3 mb-0 text-pretty">W razie chęci umówienia spotkania, prosimy o kontakt</p>
                                         </div>
                                     </div>
                                 </li>
                             </ul>
+                            <p class="fw-semibold pb-4 mb-0 fs-5">Biuro sprzedaży na inwestycji</p>
                             <ul class="list-unstyled ">
                                 <li class="pb-3">
                                     <div class="d-inline-flex gap-2 justify-content-center align-items-start">
@@ -84,7 +85,7 @@
                                             </svg>
                                         </div>
                                         <div>
-                                            ul.Beskidzka 129,<br />
+                                            ul. Beskidzka 129,<br />
                                             91-610 Łódź
                                         </div>
                                     </div>
