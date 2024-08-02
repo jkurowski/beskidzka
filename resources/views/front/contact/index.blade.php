@@ -50,7 +50,7 @@
                                         </div>
                                         <div>
                                             al. Piłsudskiego 3,<br />
-                                            91-610 Łódź
+                                            90-329 Łódź
                                         </div>
                                     </div>
                                 </li>

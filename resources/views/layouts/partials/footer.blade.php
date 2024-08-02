@@ -83,7 +83,8 @@
                             </div>
                             <div>
                                 al. Piłsudskiego 3,<br />
-                                91-610 Łódź
+                                90-329 Łódź
+                                <p class="fw-light small mt-1 mb-0 text-pretty">W razie chęci umówienia spotkania, prosimy o kontakt</p>
                             </div>
                         </div>
                     </li>
@@ -99,6 +100,7 @@
                             <div>
                                 ul. Beskidzka 129,<br />
                                 91-610 Łódź
+                                <p class="fw-light small mt-1 mb-0 text-pretty">Po wcześniejszym umówieniu spotkania na terenie budowy</p>
                             </div>
                         </div>
                     </li>
