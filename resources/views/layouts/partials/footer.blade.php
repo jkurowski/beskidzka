@@ -82,7 +82,7 @@
                                 </svg>
                             </div>
                             <div>
-                                ul. Piłsudskiego 3,<br />
+                                al. Piłsudskiego 3,<br />
                                 91-610 Łódź
                             </div>
                         </div>
