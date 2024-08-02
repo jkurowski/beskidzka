@@ -3,7 +3,9 @@
 @section('meta_title', $page->title)
 @section('seo_title', $page->meta_title)
 @section('seo_description', $page->meta_description)
-
+@if($isAdmin)
+    @include('layouts.partials.inline')
+@endif
 @section('content')
     <main>
         <section class="breadcrumb-page pb-0 pt-20 pt-md-40">
@@ -20,27 +22,17 @@
         <section>
             <div class="container">
                 <div class="row gy-30 text-center text-md-start">
-                    <div class="col-12 col-md-6 col-xl-5">
+                    <div class="col-12 col-md-6 col-xl-5 inline inline-tc">
                         <h1 class="h2 mb-4 mb-lg-40 mb-xl-60">
-                            <span data-aos="fade">Twoje marzenia,</span>
-                            <span data-aos="fade" data-aos-delay="300">nasze rozwiązania finansowe</span>
+                            <span data-aos="fade" data-modaltytul="6">{!! getInline($array, 6, 'modaltytul') !!}</span>
+                            <span data-aos="fade" data-aos-delay="300" data-modaleditor="6">{!! getInline($array, 6, 'modaleditor') !!}</span>
                         </h1>
-                        <div class="text-pretty">
-                            <p class="fw-medium" data-aos="fade">
-                                Współpracujemy z czołowym doradcą, aby pomóc Ci w znalezieniu najlepszej drogi finansowania Twojego
-                                nowego domu. Od porównania ofert kredytowych, po pomoc w załatwieniu wszelkich formalności, nasz zespół
-                                jest tutaj, aby uprościć proces zakupu i uczynić go jak najprzyjemniejszym.
-                            </p>
-                            <p class="fw-light" data-aos="fade">
-                                Każdy z budynków jest wyposażony w pompę ciepła oraz ogrzewanie podłogowe. Dzięki zastosowaniu takich
-                                rozwiązań domy zapewnią bezobsługowy komfort użytkowania przyszłym właścicielom.
-                            </p>
-                            <p class="pt-3" data-aos="fade" data-aos-delay="600">
-                                <a href="/kontakt/" class="btn btn-primary btn-min-width">
-                                    Kontakt
-                                </a>
-                            </p>
+                        <div class="text-pretty" data-modaleditortext="6">
+                            {!! getInline($array, 6, 'modaleditortext') !!}
                         </div>
+                        @if($isAdmin)
+                            <div class="inline-btn"><button type="button" class="btn btn-primary btn-modal btn-sm" data-bs-toggle="modal" data-bs-target="#inlineModal" data-inline="6" data-hideinput="modallink,modallinkbutton,file,file_alt" data-method="update" data-imgwidth="556" data-imgheight="480"></button></div>
+                        @endif
                     </div>
                     <div class="col-12 col-md-6 col-xl-5 offset-xl-2 text-md-end">
                         <img src="{{ asset('images/finansowanie_hero.png') }}" alt="" width="555" height="480" class="img-fluid" loading="eager" data-aos="fade" />

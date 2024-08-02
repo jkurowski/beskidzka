@@ -21,13 +21,17 @@ class IndexController extends Controller
 
     public function finansowanie()
     {
+        $array = Inline::getElements(3);
         $page = Page::find(2);
-        return view('front.static.finansowanie', compact('page'));
+        $isAdmin = auth()->check();
+        return view('front.static.finansowanie', compact('page', 'array' , 'isAdmin'));
     }
 
     public function about()
     {
+        $array = Inline::getElements(4);
         $page = Page::find(6);
-        return view('front.static.about', compact('page'));
+        $isAdmin = auth()->check();
+        return view('front.static.about', compact('page', 'array' , 'isAdmin'));
     }
 }

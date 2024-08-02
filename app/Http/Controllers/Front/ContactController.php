@@ -31,7 +31,8 @@ class ContactController extends Controller
         $page = Page::find(1);
         return view('front.contact.index', [
             'page' => $page,
-            'array' => Inline::getElements(1)
+            'array' => Inline::getElements(2),
+            'isAdmin' => auth()->check()
         ]);
     }
 

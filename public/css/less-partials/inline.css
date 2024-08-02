@@ -76,8 +76,7 @@ button:focus {
   text-transform: uppercase;
   padding: 13px 15px;
 }
-.modal-header .close {
-  padding: 6px;
+.modal-header .btn-close {
   text-shadow: none;
   opacity: 1;
   color: white;
@@ -88,8 +87,17 @@ button:focus {
   -o-transition: all 100ms linear;
   transition: all 100ms linear;
   border-radius: 3px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.modal-header .close:hover {
+.modal-header .btn-close svg {
+  width: 20px;
+  line-height: 20px;
+  height: 20px;
+  fill: white;
+}
+.modal-header .btn-close:hover {
   background: #00acc1;
 }
 .modal-title {

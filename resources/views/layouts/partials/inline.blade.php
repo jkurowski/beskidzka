@@ -8,7 +8,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">Edytuj</h5>
-                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Zamknij"><span aria-hidden="true">&times;</span></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zamknij"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 24 24"><path d="M11 0.7H13V23.3H11z" transform="rotate(-45.001 12 12)"></path><path d="M0.7 11H23.3V13H0.7z" transform="rotate(-45.001 12 12)"></path></svg></button>
                 </div>
                 <div class="modal-body">
                     <div class="inlineform">
@@ -138,9 +138,14 @@
                                     skin: "oxide",
                                     content_css: 'default',
                                     branding: false,
+                                    menubar: false,
                                     height: 400,
                                     plugins: "searchreplace autolink directionality visualblocks visualchars fullscreen image link gallery media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists textcolor wordcount imagetools contextmenu colorpicker textpattern filemanager",
-                                    toolbar1: "formatselect | bold italic strikethrough forecolor backcolor | link | alignleft aligncenter alignright alignjustify | numlist bullist outdent indent | removeformat | gallery",
+                                    toolbar1: "bold italic strikethrough forecolor backcolor | link | alignleft aligncenter alignright alignjustify | numlist bullist outdent indent | removeformat",
+                                    link_class_list: [
+                                        { title: 'Brak', value: '' },
+                                        { title: 'Button', value: 'btn btn-primary btn-min-width' }
+                                    ],
                                     relative_urls: false,
                                     image_advtab: true,
                                     auto_focus: 'modaleditortext'

@@ -125,34 +125,22 @@
 
         <section>
             <div class="container">
-                <div class="row gy-30 text-center text-md-start">
+                <div class="row gy-30 text-center text-md-start inline inline-tc">
                     <div class="col-12 col-md-6 col-xl-5">
                         <h2 class="mb-4 mb-lg-40 mb-xl-60">
-                            <span data-aos="fade">Zakorzenieni</span>
-                            <span data-aos="fade" data-aos-delay="300">w naturze</span>
+                            <span data-aos="fade" data-modaltytul="1">{!! getInline($array, 1, 'modaltytul') !!}</span>
+                            <span data-aos="fade" data-aos-delay="300" data-modaleditor="1">{!! getInline($array, 1, 'modaleditor') !!}</span>
                         </h2>
-                        <div class="text-pretty">
-                            <p class="fw-medium" data-aos="fade">
-                                Mieszkańcy “Beskidzka Park” mogą cieszyć się spacerami w
-                                otaczających inwestycję Wzniesieniach Łódzkich.
-                            </p>
-                            <p class="fw-light" data-aos="fade">
-                                Dzięki bliskości naturalnych terenów zielonych, jest to
-                                idealne miejsce dla miłośników długich pieszych wędrówek oraz
-                                dla tych, którzy szukają chwili relaksu na łonie natury,
-                                ciesząc się ciszą i spokojem, jaki oferują lasy.
-                            </p>
-                            <p class="pt-3" data-aos="fade" data-aos-delay="600">
-                                <a href="/beskidzka-park/" class="btn btn-primary btn-min-width">
-                                    Sprawdź
-                                </a>
-                            </p>
+                        <div class="text-pretty" data-modaleditortext="1">
+                            {!! getInline($array, 1, 'modaleditortext') !!}
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-xl-5 offset-xl-2 text-md-end">
-                        <img src="{{ asset('images/zakorzenieni_w_naturze.webp') }}" alt="" width="555" height="480" class="img-fluid"
-                             data-aos="fade" />
+                        <img src="{{ getInline($array, 1, 'file') }}" alt="{{ getInline($array, 1, 'file_alt') }}" data-img="1" width="555" height="480" class="img-fluid" data-aos="fade">
                     </div>
+                    @if($isAdmin)
+                        <div class="inline-btn"><button type="button" class="btn btn-primary btn-modal btn-sm" data-bs-toggle="modal" data-bs-target="#inlineModal" data-inline="1" data-hideinput="modallink,modallinkbutton" data-method="update" data-imgwidth="556" data-imgheight="480"></button></div>
+                    @endif
                 </div>
             </div>
         </section>
@@ -160,23 +148,17 @@
         <section>
             <div class="container">
                 <div class="row gy-30 text-center">
-                    <div class="col-12 col-md-8 offset-md-2 col-xl-6 offset-xl-3">
+                    <div class="col-12 col-md-8 offset-md-2 col-xl-6 offset-xl-3 inline inline-tc">
                         <h2 class="mb-4 mb-lg-40 mb-xl-60">
-                            <span data-aos="fade">POSTĘPY BUDOWY</span>
-                            <span data-aos="fade" data-aos-delay="300">NA BIEŻĄCO Z POSTĘPEM</span>
+                            <span data-aos="fade" data-modaltytul="2">{!! getInline($array, 2, 'modaltytul') !!}</span>
+                            <span data-aos="fade" data-aos-delay="300" data-modaleditor="2">{!! getInline($array, 2, 'modaleditor') !!}</span>
                         </h2>
-                        <div class="text-pretty">
-                            <p class="fw-medium" data-aos="fade">
-                                Zobacz, jak Beskidzka Park ożywa z każdym dniem. Nasza
-                                dedykowana sekcja postępów budowy to miejsce, gdzie regularnie
-                                aktualizujemy zdjęcia, filmy i informacje o statusie projektu.
-                            </p>
-                            <p class="fw-light" data-aos="fade">
-                                Możesz śledzić, jak Twój przyszły dom przechodzi od projektu
-                                do rzeczywistości, z naszym zobowiązaniem do przekazania
-                                kluczy w ustalonym terminie.
-                            </p>
+                        <div class="text-pretty" data-modaleditortext="2">
+                            {!! getInline($array, 2, 'modaleditortext') !!}
                         </div>
+                        @if($isAdmin)
+                            <div class="inline-btn"><button type="button" class="btn btn-primary btn-modal btn-sm" data-bs-toggle="modal" data-bs-target="#inlineModal" data-inline="2" data-hideinput="modallink,modallinkbutton,file,file_alt" data-method="update" data-imgwidth="556" data-imgheight="480"></button></div>
+                        @endif
                     </div>
                 </div>
                 <div class="row">
@@ -292,29 +274,21 @@
         <section class="position-relative overflow-hidden">
             <div class="container">
                 <div class="row gy-30 text-center text-md-start">
-                    <div class="col-12 col-md-6 col-xl-5">
+                    <div class="col-12 col-md-6 col-xl-5 inline inline-tc">
                         <div class="col-8 offset-2 col-sm-6 offset-sm-3 offset-md-0 mb-3">
                             <img class="img-fluid" src="{{ asset('images/abart_logo.webp') }}" width="609" height="100" alt="" loading="lazy"
                                  decoding="async">
                         </div>
                         <h2 class="mb-4 mb-lg-40 mb-xl-60">
-                            <span data-aos="fade">WYKOŃCZENIE</span>
-                            <span data-aos="fade" data-aos-delay="300">POD KLUCZ</span>
+                            <span data-aos="fade" data-modaltytul="3">{!! getInline($array, 3, 'modaltytul') !!}</span>
+                            <span data-aos="fade" data-aos-delay="300" data-modaleditor="3">{!! getInline($array, 3, 'modaleditor') !!}</span>
                         </h2>
-                        <div class="text-pretty">
-                            <p class="fw-medium" data-aos="fade">
-                                Dla naszych klientów oferujemy nie tylko komfortowe domy, ale również możliwość ich kompleksowego
-                                wykończenia. Współpracujemy z zaufaną firmą wykończeniową, która posiada wieloletnie doświadczenie w
-                                branży. Dzięki temu możecie Państwo cieszyć się swoim nowym domem bez dodatkowego stresu i
-                                zaangażowania. Zapewniamy profesjonalne doradztwo, wysoką jakość wykonania oraz atrakcyjne warunki
-                                współpracy. Szczegóły oferty dostępne są w naszym biurze sprzedaży.
-                            </p>
-                            <p class="pt-3" data-aos="fade" data-aos-delay="600">
-                                <a href="/beskidzka-park/#oferta" class="btn btn-primary btn-min-width">
-                                    Dostępne domy
-                                </a>
-                            </p>
+                        <div class="text-pretty" data-modaleditortext="3">
+                            {!! getInline($array, 3, 'modaleditortext') !!}
                         </div>
+                        @if($isAdmin)
+                            <div class="inline-btn"><button type="button" class="btn btn-primary btn-modal btn-sm" data-bs-toggle="modal" data-bs-target="#inlineModal" data-inline="3" data-hideinput="modallink,modallinkbutton,file,file_alt" data-method="update" data-imgwidth="556" data-imgheight="480"></button></div>
+                        @endif
                     </div>
                     <div class="col-12 col-md-6 col-xl-7">
                         <div class="position-relative with-shifted-slider slider-out-of-grid">
@@ -351,30 +325,20 @@
         <section>
             <div class="container">
                 <div class="row gy-30 text-center text-md-start">
-                    <div class="col-12 col-md-6 col-xl-5">
+                    <div class="col-12 col-md-6 col-xl-5 inline inline-tc">
                         <h2 class="mb-4 mb-lg-40 mb-xl-60">
-                            <span data-aos="fade">Doskonała lokalizacja,</span>
-                            <span data-aos="fade" data-aos-delay="300"> niezliczone możliwości</span>
+                            <span data-aos="fade" data-modaltytul="4">{!! getInline($array, 4, 'modaltytul') !!}</span>
+                            <span data-aos="fade" data-aos-delay="300" data-modaleditor="4">{!! getInline($array, 4, 'modaleditor') !!}</span>
                         </h2>
-                        <div class="text-pretty">
-                            <p class="fw-medium" data-aos="fade">
-                                Beskidzka Park to Twoja oaza spokoju, położona tak abyś mógł cieszyć się zarówno urokami życia w
-                                mieście, jak i jego zielonymi terenami.
-
-
-                            </p>
-                            <p class="fw-light" data-aos="fade">
-                                Lokalizacja osiedla, 15 minut od centrum Łodzi i bliskość do głównych tras komunikacyjnych, gwarantuje
-                                łatwy dostęp do wszelkich udogodnień miejskich, od centrów handlowych po instytucje kultury. Również
-                                miłośnicy aktywności na świeżym powietrzu znajdą coś dla siebie, z licznymi ścieżkami rowerowymi i
-                                terenami do spacerów w bezpośrednim sąsiedztwie osiedla.
-                            </p>
+                        <div class="text-pretty" data-modaleditortext="4">
+                            {!! getInline($array, 4, 'modaleditortext') !!}
                         </div>
+                        @if($isAdmin)
+                            <div class="inline-btn"><button type="button" class="btn btn-primary btn-modal btn-sm" data-bs-toggle="modal" data-bs-target="#inlineModal" data-inline="4" data-hideinput="modallink,modallinkbutton,file,file_alt" data-method="update" data-imgwidth="556" data-imgheight="480"></button></div>
+                        @endif
                     </div>
                     <div class="col-12 col-md-6 col-xl-7 text-md-end">
-                        <div id="map" class="map text-center w-100 h-100" data-aos="fade" data-aos-delay="500">
-
-                        </div>
+                        <div id="map" class="map text-center w-100 h-100" data-aos="fade" data-aos-delay="500"></div>
                     </div>
                     <div class="col-12 pt-50">
                         <div class="row pt-md-20 justify-content-center gy-30 gy-md-50 row-cols-2  row-cols-md-3 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-6 text-center text-sm-start">

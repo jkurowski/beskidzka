@@ -36,7 +36,7 @@ class IndexController extends Controller
 
         $markers = Map::all();
 
-        $array = Inline::getElements(3);
+        $array = Inline::getElements(1);
 
         if(settings()->get("popup_status") == "1") {
             if(settings()->get("popup_mode") == "1") {

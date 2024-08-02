@@ -3,7 +3,9 @@
 @section('meta_title', $page->title)
 @section('seo_title', $page->meta_title)
 @section('seo_description', $page->meta_description)
-
+@if($isAdmin)
+    @include('layouts.partials.inline')
+@endif
 @section('content')
     <main>
         <section class="breadcrumb-page pb-0 pt-20 pt-md-40">
@@ -20,19 +22,17 @@
         <section>
             <div class="container">
                 <div class="row">
-                    <div class="col-12 col-md-8 offset-md-2 col-xl-6 offset-xl-3 text-center">
+                    <div class="col-12 col-md-8 offset-md-2 col-xl-6 offset-xl-3 text-center inline inline-tc">
                         <h1 class="h2 mb-4 mb-lg-40">
-                            <span data-aos="fade" class="aos-init aos-animate">Rozpocznijmy razem</span>
-                            <span data-aos="fade" data-aos-delay="300" class="aos-init aos-animate">nowy rozdział</span>
+                            <span data-aos="fade" class="aos-init aos-animate" data-modaltytul="5">{!! getInline($array, 5, 'modaltytul') !!}</span>
+                            <span data-aos="fade" data-aos-delay="300" class="aos-init aos-animate" data-modaleditor="5">{!! getInline($array, 5, 'modaleditor') !!}</span>
                         </h1>
-                        <div class="text-pretty mb-60">
-                            <p class="fw-medium" data-aos="fade">
-                                Czy to zapytanie, wizyta, czy chęć zobaczenia planów domów – nasz zespół sprzedaży jest do Twojej
-                                dyspozycji. Skontaktuj się z nami poprzez formularz na stronie, telefonicznie lub osobiście w naszym
-                                biurze sprzedaży. Czekamy, aby odpowiedzieć na Twoje pytania i przedstawić wszystko, co Beskidzka Park
-                                ma do zaoferowania.
-                            </p>
+                        <div class="text-pretty mb-60" data-modaleditortext="5">
+                            {!! getInline($array, 5, 'modaleditortext') !!}
                         </div>
+                        @if($isAdmin)
+                            <div class="inline-btn"><button type="button" class="btn btn-primary btn-modal btn-sm" data-bs-toggle="modal" data-bs-target="#inlineModal" data-inline="5" data-hideinput="modallink,modallinkbutton,file,file_alt" data-method="update" data-imgwidth="556" data-imgheight="480"></button></div>
+                        @endif
                     </div>
                 </div>
                 <div class="row gy-4">
@@ -45,9 +45,7 @@
                                         <div>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="15.392" height="21.805"
                                                  viewBox="0 0 15.392 21.805">
-                                                <path
-                                                        d="M14.7,3a7.191,7.191,0,0,0-7.2,7.2c0,5.4,7.2,13.364,7.2,13.364s7.2-7.967,7.2-13.364A7.191,7.191,0,0,0,14.7,3Zm0,9.766a2.57,2.57,0,1,1,2.57-2.57A2.571,2.571,0,0,1,14.7,12.766Z"
-                                                        transform="translate(-7 -2.5)" fill="none" stroke="currentColor" stroke-width="1" />
+                                                <path d="M14.7,3a7.191,7.191,0,0,0-7.2,7.2c0,5.4,7.2,13.364,7.2,13.364s7.2-7.967,7.2-13.364A7.191,7.191,0,0,0,14.7,3Zm0,9.766a2.57,2.57,0,1,1,2.57-2.57A2.571,2.571,0,0,1,14.7,12.766Z" transform="translate(-7 -2.5)" fill="none" stroke="currentColor" stroke-width="1" />
                                             </svg>
                                         </div>
                                         <div>
@@ -62,13 +60,8 @@
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16.646" height="16.646"
                                                  viewBox="0 0 16.646 16.646">
                                                 <g transform="translate(-2.35 -2.35)">
-                                                    <path
-                                                            d="M10.673,18.846a8.173,8.173,0,1,1,8.173-8.173A8.182,8.182,0,0,1,10.673,18.846Zm0-15.568a7.395,7.395,0,1,0,7.395,7.395,7.4,7.4,0,0,0-7.395-7.395Z"
-                                                            transform="translate(0 0)" fill="currentColor" stroke="currentColor" stroke-width="0.3" />
-                                                    <path
-                                                            d="M51.933,21.674H48.127a.389.389,0,0,1-.389-.389V15.707a.389.389,0,1,1,.778,0V20.9h3.416a.389.389,0,1,1,0,.778Z"
-                                                            transform="translate(-37.454 -10.612)" fill="currentColor" stroke="currentColor"
-                                                            stroke-width="0.3" />
+                                                    <path d="M10.673,18.846a8.173,8.173,0,1,1,8.173-8.173A8.182,8.182,0,0,1,10.673,18.846Zm0-15.568a7.395,7.395,0,1,0,7.395,7.395,7.4,7.4,0,0,0-7.395-7.395Z" transform="translate(0 0)" fill="currentColor" stroke="currentColor" stroke-width="0.3" />
+                                                    <path d="M51.933,21.674H48.127a.389.389,0,0,1-.389-.389V15.707a.389.389,0,1,1,.778,0V20.9h3.416a.389.389,0,1,1,0,.778Z" transform="translate(-37.454 -10.612)" fill="currentColor" stroke="currentColor" stroke-width="0.3" />
                                                 </g>
                                             </svg>
                                         </div>
@@ -99,7 +92,7 @@
                                 </li>
                                 <li>
                                     <a class="link-hover-primary d-inline-flex gap-2 justify-content-center align-items-center"
-                                       href="mailto:biuro@beskidzkapark.pl ">
+                                       href="mailto:sprzedaz@beskidzkapark.pl">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="18.283" height="14.512" viewBox="0 0 18.283 14.512">
                                             <g transform="translate(0.696 0.5)">
                                                 <path
@@ -110,7 +103,7 @@
                                                       stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" />
                                             </g>
                                         </svg>
-                                        <span> biuro@beskidzkapark.pl </span>
+                                        <span> sprzedaz@beskidzkapark.pl </span>
                                     </a>
                                 </li>
                             </ul>

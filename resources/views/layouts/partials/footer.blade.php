@@ -53,7 +53,7 @@
                     </li>
                     <li>
                         <a class="link-white fw-medium d-inline-flex gap-2 justify-content-center align-items-center"
-                           href="mailto:biuro@beskidzkapark.pl ">
+                           href="mailto:sprzedaz@beskidzkapark.pl">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18.283" height="14.512" viewBox="0 0 18.283 14.512">
                                 <g transform="translate(0.696 0.5)">
                                     <path
@@ -64,7 +64,7 @@
                                           stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" />
                                 </g>
                             </svg>
-                            <span> biuro@beskidzkapark.pl </span>
+                            <span> sprzedaz@beskidzkapark.pl </span>
                         </a>
                     </li>
                 </ul>

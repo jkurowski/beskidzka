@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 use Intervention\Image\ImageManagerStatic as Image;
+use Intervention\Image\ImageManagerStatic as ImageManager;
 
 class Inline extends Model
 {
@@ -49,14 +50,20 @@ class Inline extends Model
             }
         }
 
-        $filename = Str::slug($name) . '_' . Str::random(3) . '.' .$uploadfile->getClientOriginalExtension();
-        $uploadfile->storeAs('inline', $filename, 'public_uploads');
+        $name_file = Str::slug($name) . '_' . Str::random(3) . '.' .$uploadfile->getClientOriginalExtension();
+        $uploadfile->storeAs('inline', $name_file, 'public_uploads');
 
-        $filepath = public_path('uploads/inline/' . $filename);
-        Image::make($filepath)->fit($width, $height)->save($filepath);
+        $name_webp = date('His') . '_' . Str::slug($name_file) . '.webp';
 
-        $this->update(['file' => $filename ]);
+        $filepath = public_path('uploads/inline/' . $name_file);
+        $filepath_webp = public_path('uploads/inline/' . $name_webp);
 
-        return $filename;
+
+        //Image::make($filepath)->fit($width, $height)->save($filepath);
+        ImageManager::make($filepath)->encode('webp', 90)->save($filepath_webp);
+
+        $this->update(['file' => $name_webp ]);
+
+        return $name_webp;
     }
 }
