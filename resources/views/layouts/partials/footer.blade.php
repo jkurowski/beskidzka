@@ -82,7 +82,22 @@
                                 </svg>
                             </div>
                             <div>
-                                ul.Beskidzka 129,<br />
+                                ul. Piłsudskiego 3,<br />
+                                91-610 Łódź
+                            </div>
+                        </div>
+                    </li>
+                    <li class="pb-3">
+                        <div class="d-inline-flex gap-2 justify-content-center align-items-start">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15.392" height="21.805" viewBox="0 0 15.392 21.805">
+                                    <path
+                                            d="M14.7,3a7.191,7.191,0,0,0-7.2,7.2c0,5.4,7.2,13.364,7.2,13.364s7.2-7.967,7.2-13.364A7.191,7.191,0,0,0,14.7,3Zm0,9.766a2.57,2.57,0,1,1,2.57-2.57A2.571,2.571,0,0,1,14.7,12.766Z"
+                                            transform="translate(-7 -2.5)" fill="none" stroke="#fff" stroke-width="1" />
+                                </svg>
+                            </div>
+                            <div>
+                                ul. Beskidzka 129,<br />
                                 91-610 Łódź
                             </div>
                         </div>

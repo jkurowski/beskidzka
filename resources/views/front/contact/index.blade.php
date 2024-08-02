@@ -49,7 +49,7 @@
                                             </svg>
                                         </div>
                                         <div>
-                                            ul.Beskidzka 129,<br />
+                                            ul. Piłsudskiego 3,<br />
                                             91-610 Łódź
                                         </div>
                                     </div>
@@ -70,6 +70,41 @@
                                             poniedziałek-piątek<br>
                                             9:00 - 17:00<br>
                                             <p class="text-body-emphasis fw-light small mt-3 mb-0 text-pretty">To są standardowe godziny otwarcia biura, w razie chęci umówienia spotkania, prosimy o kontakt i umówienie wizyty</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="list-unstyled ">
+                                <li class="pb-3">
+                                    <div class="d-inline-flex gap-2 justify-content-center align-items-start">
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="15.392" height="21.805"
+                                                 viewBox="0 0 15.392 21.805">
+                                                <path d="M14.7,3a7.191,7.191,0,0,0-7.2,7.2c0,5.4,7.2,13.364,7.2,13.364s7.2-7.967,7.2-13.364A7.191,7.191,0,0,0,14.7,3Zm0,9.766a2.57,2.57,0,1,1,2.57-2.57A2.571,2.571,0,0,1,14.7,12.766Z" transform="translate(-7 -2.5)" fill="none" stroke="currentColor" stroke-width="1" />
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            ul.Beskidzka 129,<br />
+                                            91-610 Łódź
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-inline-flex gap-2 justify-content-center align-items-start">
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16.646" height="16.646"
+                                                 viewBox="0 0 16.646 16.646">
+                                                <g transform="translate(-2.35 -2.35)">
+                                                    <path d="M10.673,18.846a8.173,8.173,0,1,1,8.173-8.173A8.182,8.182,0,0,1,10.673,18.846Zm0-15.568a7.395,7.395,0,1,0,7.395,7.395,7.4,7.4,0,0,0-7.395-7.395Z" transform="translate(0 0)" fill="currentColor" stroke="currentColor" stroke-width="0.3" />
+                                                    <path d="M51.933,21.674H48.127a.389.389,0,0,1-.389-.389V15.707a.389.389,0,1,1,.778,0V20.9h3.416a.389.389,0,1,1,0,.778Z" transform="translate(-37.454 -10.612)" fill="currentColor" stroke="currentColor" stroke-width="0.3" />
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            Godziny otwarcia<br>
+                                            poniedziałek-piątek<br>
+                                            9:00 - 17:00<br>
+                                            <p class="text-body-emphasis fw-light small mt-3 mb-0 text-pretty">Po wcześniejszym umówieniu spotkania na terenie budowy</p>
                                         </div>
                                     </div>
                                 </li>
