@@ -74,7 +74,6 @@
                             }
                         }
                     </style>
-                    </div>
                 </div>
             </div>
         </section>

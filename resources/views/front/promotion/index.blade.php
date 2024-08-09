@@ -3,7 +3,9 @@
 @section('meta_title', $page->title)
 @section('seo_title', $page->meta_title)
 @section('seo_description', $page->meta_description)
-
+@if($isAdmin)
+    @include('layouts.partials.inline')
+@endif
 @section('content')
     <main>
         <section class="breadcrumb-page pb-0 pt-20 pt-md-40">
@@ -20,33 +22,21 @@
         <section>
             <div class="container">
                 <div class="row gy-30 text-center text-md-start">
-                    <div class="col-12 col-md-6 col-xl-5">
+                    <div class="col-12 col-md-6 col-xl-5 inline inline-tc">
                         <h1 class="h2">
-                            <span data-aos="fade">Pakiet korzyści</span>
+                            <span data-aos="fade" data-modaltytul="12">{!! getInline($array, 12, 'modaltytul') !!}</span>
                             <span data-aos="fade" data-aos-delay="300" class="d-none hidden">Expander</span>
                         </h1>
                         <div class="col-4 mb-4 mb-lg-40 mb-xl-60 mx-auto mx-md-0">
                             <img src="{{ asset('images/expander_logo.png')}}" alt="" width="478" height="124" class="img-fluid" loading="eager">
                         </div>
-                        <div class="text-pretty">
-                            <p class="fw-medium " data-aos="fade">
-                                Odbierz zwrot 0,4%
-                                od kwoty Twojego
-                                kredytu hipotecznego!
-                            </p>
-                            <p class="fw-light " data-aos="fade">
-                                Dzięki współpracy Heritage Invest Park i Expander
-                                otrzymasz premię - zwrot pieniędzy
-                                za Twój kredyt hipoteczny.
-                            </p>
-                            <p class="pt-3 " data-aos="fade" data-aos-delay="600">
-                                <a href="{{asset('pdf/expander_promocja.pdf')}}" class="btn btn-primary btn-min-width" target="_blank" rel="noopener">
-                                    Szczegóły promocji
-                                </a>
-                            </p>
+                        <div class="text-pretty" data-modaleditortext="12">
+                            {!! getInline($array, 12, 'modaleditortext') !!}
                         </div>
+                        @if($isAdmin)
+                            <div class="inline-btn"><button type="button" class="btn btn-primary btn-modal btn-sm" data-bs-toggle="modal" data-bs-target="#inlineModal" data-inline="12" data-hideinput="modaleditor,modallink,modallinkbutton,file,file_alt" data-method="update" data-imgwidth="556" data-imgheight="480"></button></div>
+                        @endif
                     </div>
-
                 </div>
             </div>
         </section>

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Front\Developro;
 
 use App\Http\Controllers\Controller;
+use App\Models\Gallery;
+use App\Models\Inline;
 use App\Models\Investment;
 use App\Models\Map;
 use Illuminate\Http\Request;
@@ -57,7 +59,11 @@ class InvestmentController extends Controller
         return view('front.developro.investment.index', [
             'investment' => $investment,
             'page' => $page,
-            'markers' => $markers
+            'gallery' => Gallery::with('photos')->find(1),
+            'markers' => $markers,
+            'array' => Inline::getElements(1),
+            'arrayInvestment' => Inline::getElements(6),
+            'isAdmin' => auth()->check()
         ]);
     }
 }

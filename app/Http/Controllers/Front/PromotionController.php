@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use App\Models\Inline;
 use App\Models\Page;
 use App\Models\Property;
 use App\Repositories\InvestmentRepository;
@@ -21,6 +22,10 @@ class PromotionController extends Controller
     public function index(Request $request) {
         $page = Page::find(3); // @TODO: Do zmiany gdy zostanie utworzona strona
         $promotion_items = Property::where('name', 'like', '%A3%')->orWhere('name', 'like', '%D3%')->get();
-        return view("front.promotion.index", compact("page","promotion_items"));
+
+        $array = Inline::getElements(5);
+        $isAdmin = auth()->check();
+
+        return view("front.promotion.index", compact("page","promotion_items", "array", "isAdmin"));
     }
 }

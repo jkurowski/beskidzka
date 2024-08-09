@@ -3,7 +3,9 @@
 @section('meta_title', $page->title)
 @section('seo_title', $page->meta_title)
 @section('seo_description', $page->meta_description)
-
+@if($isAdmin)
+    @include('layouts.partials.inline')
+@endif
 @section('content')
     <main>
         <section class="breadcrumb-page pb-0 pt-20 pt-md-40">
@@ -19,33 +21,22 @@
 
         <section id="o-inwestycji">
             <div class="container">
-                <div class="row gy-30 text-center text-md-start">
+                <div class="row gy-30 text-center text-md-start inline inline-tc">
                     <div class="col-12 col-md-6 col-xl-5">
                         <h1 class="h2 mb-4 mb-lg-40 mb-xl-60">
-                            <span data-aos="fade">Beskidzka</span>
-                            <span data-aos="fade" data-aos-delay="300">park</span>
+                            <span data-aos="fade" data-modaltytul="13">{!! getInline($arrayInvestment, 13, 'modaltytul') !!}</span>
+                            <span data-aos="fade" data-aos-delay="300" data-modaleditor="13">{!! getInline($arrayInvestment, 13, 'modaleditor') !!}</span>
                         </h1>
-                        <div class="text-pretty">
-                            <p class="fw-medium" data-aos="fade">
-                                Beskidzka Park to kameralne, ogrodzone osiedle składające się z 20 domów jednorodzinnych w zabudowie
-                                bliźniaczej i szeregowej, o metrażu 125m², z tarasami wychodzącymi na własne ogródki, położone w
-                                otulinie Wzniesień Łódzkich.
-                            </p>
-                            <p class="fw-light" data-aos="fade">
-                                Każdy z budynków jest wyposażony w pompę ciepła oraz ogrzewanie podłogowe. Dzięki zastosowaniu takich
-                                rozwiązań domy zapewnią bezobsługowy komfort użytkowania przyszłym właścicielom.
-                            </p>
-                            <p class="pt-3" data-aos="fade" data-aos-delay="600">
-                                <a href="/kontakt/" class="btn btn-primary btn-min-width">
-                                    Kontakt
-                                </a>
-                            </p>
+                        <div class="text-pretty" data-modaleditortext="13">
+                            {!! getInline($arrayInvestment, 13, 'modaleditortext') !!}
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-xl-5 offset-xl-2 text-md-end">
-                        <img src="{{ asset('images/beskidzka_hero.png') }}" alt="" width="555" height="480" class="img-fluid" loading="eager"
-                             data-aos="fade" />
+                        <img src="{{ getInline($arrayInvestment, 13, 'file') }}" alt="{{ getInline($arrayInvestment, 13, 'file_alt') }}" class="img-fluid" width="555" height="480" loading="eager" data-img="13">
                     </div>
+                    @auth
+                        <div class="inline-btn"><button type="button" class="btn btn-primary btn-modal btn-sm" data-bs-toggle="modal" data-bs-target="#inlineModal" data-inline="13" data-hideinput="modallink,modallinkbutton" data-method="update" data-imgwidth="672" data-imgheight="503"></button></div>
+                    @endauth
                 </div>
             </div>
         </section>
@@ -159,73 +150,44 @@
 
         <section>
             <div class="container">
-                <div class="row gy-30 text-center text-md-start">
+                <div class="row gy-30 text-center text-md-start inline inline-tc">
                     <div class="col-12 col-md-6 col-xl-5 order-last order-md-first text-md-end">
-                        <img src="{{ asset('images/beskidzka_s3.png') }}" alt="" width="555" height="480" class="img-fluid" loading="lazy"
-                             data-aos="fade" />
+                         <img src="{{ getInline($arrayInvestment, 14, 'file') }}" alt="{{ getInline($arrayInvestment, 14, 'file_alt') }}" class="img-fluid" width="555" height="480" loading="lazy" data-img="14">
                     </div>
                     <div class="col-12 col-md-6 col-xl-5 offset-xl-2">
                         <h2 class="mb-4 mb-lg-40 mb-xl-60">
-                            <span data-aos="fade">Ekologia</span>
-                            <span data-aos="fade" data-aos-delay="300">Żyj w Zgodzie z Naturą</span>
+                            <span data-aos="fade" data-modaltytul="14">{!! getInline($arrayInvestment, 14, 'modaltytul') !!}</span>
+                            <span data-aos="fade" data-aos-delay="300" data-modaleditor="14">{!! getInline($arrayInvestment, 14, 'modaleditor') !!}</span>
                         </h2>
-                        <div class="text-pretty">
-                            <p class="fw-medium" data-aos="fade">
-                                Dodatkowo zapewniamy przyszłym mieszkańcom możliwość instalacji paneli fotowoltaicznych na dachu
-                                zakupionego budynku. Każdy z domów posiada m.in.: miejsce w garażu (w bryle zakupionego budynku),
-                                miejsce postojowe przed domem, duży
-                                salon z aneksem kuchennym, pomieszczenie gospodarcze, dwie łazienki, 4 sypialnie
-                                oraz własny ogródek.
-
-                            </p>
-                            <p class="fw-light" data-aos="fade">
-                                Domy są budowane w technologii tradycyjnej: ściany zewnętrzne i wewnętrzne murowane, strop lany. Budynki
-                                wyróżniają się wysokiej jakości architekturą poprzez zastosowane rozwiązania funkcjonalne oraz
-                                materiałowe, m.in.: blacha na rąbek stojący w kolorze antracytowym, stolarka okienna w kolorze
-                                antracytowym, wysokiej jakości materiały drewnopodobne.
-                            </p>
-                            <p class="pt-3" data-aos="fade" data-aos-delay="600">
-                                <a href="/kontakt/" class="btn btn-primary btn-min-width">
-                                    Kontakt
-                                </a>
-                            </p>
+                        <div class="text-pretty" data-modaleditortext="14">
+                            {!! getInline($arrayInvestment, 14, 'modaleditortext') !!}
                         </div>
                     </div>
-
+                    @auth
+                        <div class="inline-btn"><button type="button" class="btn btn-primary btn-modal btn-sm" data-bs-toggle="modal" data-bs-target="#inlineModal" data-inline="14" data-hideinput="modallink,modallinkbutton" data-method="update" data-imgwidth="672" data-imgheight="503"></button></div>
+                    @endauth
                 </div>
             </div>
         </section>
 
         <section>
             <div class="container">
-                <div class="row gy-30 text-center text-md-start">
+                <div class="row gy-30 text-center text-md-start inline inline-tc">
                     <div class="col-12 col-md-6 col-xl-5">
                         <h2 class="mb-4 mb-lg-40 mb-xl-60">
-                            <span data-aos="fade">NISKIE RACHUNKI</span>
-                            <span data-aos="fade" data-aos-delay="300">I CZYSTE SUMIENIE</span>
+                            <span data-aos="fade" data-modaltytul="15">{!! getInline($arrayInvestment, 15, 'modaltytul') !!}</span>
+                            <span data-aos="fade" data-aos-delay="300" data-modaleditor="15">{!! getInline($arrayInvestment, 15, 'modaleditor') !!}</span>
                         </h2>
-                        <div class="text-pretty">
-                            <p class="fw-medium" data-aos="fade">
-                                W każdym domu w Beskidzka Park znajdziesz technologie, które zmniejszą ślad węglowy i obniżą miesięczne
-                                koszty utrzymania. Pompy ciepła najnowszej generacji a także opcja montażu paneli słonecznych to tylko
-                                dwa z rozwiązań, które sprawiają, że Twoje mieszkanie jest tak samo przyjazne dla Ciebie, jak i dla
-                                środowiska.
-                            </p>
-                            <p class="fw-light" data-aos="fade">
-                                Dbamy o to, by nasze domy były energooszczędne i zasilane w sposób zrównoważony, co przekłada się na
-                                komfort i zdrowie Twoje oraz Twoich najbliższych.
-                            </p>
-                            <p class="pt-3" data-aos="fade" data-aos-delay="600">
-                                <a href="/kontakt/" class="btn btn-primary btn-min-width">
-                                    Kontakt
-                                </a>
-                            </p>
+                        <div class="text-pretty" data-modaleditortext="15">
+                            {!! getInline($arrayInvestment, 15, 'modaleditortext') !!}
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-xl-5 offset-xl-2 text-md-end">
-                        <img src="{{ asset('images/beskidzka_s4.png') }}" alt="" width="555" height="480" class="img-fluid" loading="lazy"
-                             data-aos="fade" />
+                        <img src="{{ getInline($arrayInvestment, 15, 'file') }}" alt="{{ getInline($arrayInvestment, 15, 'file_alt') }}" class="img-fluid" width="555" height="480" loading="eager" data-img="15">
                     </div>
+                    @auth
+                        <div class="inline-btn"><button type="button" class="btn btn-primary btn-modal btn-sm" data-bs-toggle="modal" data-bs-target="#inlineModal" data-inline="15" data-hideinput="modallink,modallinkbutton" data-method="update" data-imgwidth="672" data-imgheight="503"></button></div>
+                    @endauth
                 </div>
             </div>
         </section>
@@ -233,26 +195,20 @@
         <section id="lokalizacja">
             <div class="container">
                 <div class="row gy-30 text-center text-md-start">
-                    <div class="col-12 col-md-6 col-xl-5">
+                    <div class="col-12 col-md-6 col-xl-5 inline inline-tc">
                         <h2 class="mb-4 mb-lg-40 mb-xl-60">
-                            <span data-aos="fade">Lokalizacja</span>
-                            <span data-aos="fade" data-aos-delay="300">Inwestycji</span>
+                            <span data-aos="fade" data-modaltytul="4">{!! getInline($array, 4, 'modaltytul') !!}</span>
+                            <span data-aos="fade" data-aos-delay="300" data-modaleditor="4">{!! getInline($array, 4, 'modaleditor') !!}</span>
                         </h2>
-                        <div class="text-pretty">
-                            <p class="fw-medium" data-aos="fade">
-                                Osiedle Beskidzka Park położone jest 15 minut od centrum
-                                Łodzi, 10 minut od autostrady A1.
-                            </p>
-                            <p class="fw-light" data-aos="fade">
-                                W sąsiedztwie terenów zielonych z licznymi ścieżkami rowerowymi i terenami do spacerów po Wzniesieniach
-                                Łódzkich.
-                            </p>
+                        <div class="text-pretty" data-modaleditortext="4">
+                            {!! getInline($array, 4, 'modaleditortext') !!}
                         </div>
+                        @if($isAdmin)
+                            <div class="inline-btn"><button type="button" class="btn btn-primary btn-modal btn-sm" data-bs-toggle="modal" data-bs-target="#inlineModal" data-inline="4" data-hideinput="modallink,modallinkbutton,file,file_alt" data-method="update" data-imgwidth="556" data-imgheight="480"></button></div>
+                        @endif
                     </div>
                     <div class="col-12 col-md-6 col-xl-7 text-md-end">
-                        <div id="map" class="map text-center w-100 h-100" data-aos="fade" data-aos-delay="500">
-
-                        </div>
+                        <div id="map" class="map text-center w-100 h-100" data-aos="fade" data-aos-delay="500"></div>
                     </div>
                     <div class="col-12">
                         <div
@@ -685,29 +641,21 @@
         <section class="position-relative overflow-hidden">
             <div class="container">
                 <div class="row gy-30 text-center text-md-start">
-                    <div class="col-12 col-md-6 col-xl-5">
+                    <div class="col-12 col-md-6 col-xl-5 inline inline-tc">
                         <div class="col-8 offset-2 col-sm-6 offset-sm-3 offset-md-0 mb-3">
                             <img class="img-fluid" src="{{ asset('images/abart_logo.webp') }}" width="609" height="100" alt="" loading="lazy"
                                  decoding="async">
                         </div>
                         <h2 class="mb-4 mb-lg-40 mb-xl-60">
-                            <span data-aos="fade">WYKOŃCZENIE</span>
-                            <span data-aos="fade" data-aos-delay="300">POD KLUCZ</span>
+                            <span data-aos="fade" data-modaltytul="3">{!! getInline($array, 3, 'modaltytul') !!}</span>
+                            <span data-aos="fade" data-aos-delay="300" data-modaleditor="3">{!! getInline($array, 3, 'modaleditor') !!}</span>
                         </h2>
-                        <div class="text-pretty">
-                            <p class="fw-medium" data-aos="fade">
-                                Dla naszych klientów oferujemy nie tylko komfortowe domy, ale również możliwość ich kompleksowego
-                                wykończenia. Współpracujemy z zaufaną firmą wykończeniową, która posiada wieloletnie doświadczenie w
-                                branży. Dzięki temu możecie Państwo cieszyć się swoim nowym domem bez dodatkowego stresu i
-                                zaangażowania. Zapewniamy profesjonalne doradztwo, wysoką jakość wykonania oraz atrakcyjne warunki
-                                współpracy. Szczegóły oferty dostępne są w naszym biurze sprzedaży.
-                            </p>
-                            <p class="pt-3" data-aos="fade" data-aos-delay="600">
-                                <a href="/beskidzka-park/#oferta" class="btn btn-primary btn-min-width">
-                                    Dostępne domy
-                                </a>
-                            </p>
+                        <div class="text-pretty" data-modaleditortext="3">
+                            {!! getInline($array, 3, 'modaleditortext') !!}
                         </div>
+                        @if($isAdmin)
+                            <div class="inline-btn"><button type="button" class="btn btn-primary btn-modal btn-sm" data-bs-toggle="modal" data-bs-target="#inlineModal" data-inline="3" data-hideinput="modallink,modallinkbutton,file,file_alt" data-method="update" data-imgwidth="556" data-imgheight="480"></button></div>
+                        @endif
                     </div>
                     <div class="col-12 col-md-6 col-xl-7">
                         <div class="position-relative with-shifted-slider slider-out-of-grid">
@@ -753,91 +701,18 @@
                     </div>
                 </div>
                 <div class="row justify-content-center gy-4 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
-                    <div class="col" data-aos="fade">
-                        <div class="aspect-ratio-slide">
-                            <a class="glightbox" data-gallery="wiz" href="{{ asset('images/08_SALON 1.webp') }}">
-                                <img src="{{ asset('images/08_SALON 1_thumb.webp') }}" alt="" loading="lazy" width="321" height="288"
-                                     class="w-100 h-100 object-fit-cover  rounded-2">
-                            </a>
+                    @foreach($gallery->photos as $p)
+                        <div class="col" data-aos="fade">
+                            <div class="aspect-ratio-slide">
+                                <a class="glightbox" data-gallery="wiz" href="{{ asset('uploads/gallery/images/'.$p->file) }}">
+                                    <img src="{{ asset('uploads/gallery/images/thumbs/webp/'.$p->file_webp) }}" alt="" loading="lazy" width="321" height="288" class="w-100 h-100 object-fit-cover  rounded-2">
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col" data-aos="fade">
-                        <div class="aspect-ratio-slide">
-                            <a class="glightbox" data-gallery="wiz" href="{{ asset('images/09_KUCHNIA 1.webp') }}">
-                                <img src="{{ asset('images/09_KUCHNIA 1_thumb.webp') }}" alt="" loading="lazy" width="321" height="288"
-                                     class="w-100 h-100 object-fit-cover  rounded-2">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col" data-aos="fade">
-                        <div class="aspect-ratio-slide">
-                            <a class="glightbox" data-gallery="wiz" href="{{ asset('images/10_KUCHNIA 2.webp') }}">
-                                <img src="{{ asset('images/10_KUCHNIA 2_thumb.webp') }}" alt="" loading="lazy" width="321" height="288"
-                                     class="w-100 h-100 object-fit-cover  rounded-2">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col" data-aos="fade">
-                        <div class="aspect-ratio-slide">
-                            <a class="glightbox" data-gallery="wiz" href="{{ asset('images/07_BESKIDZKA_DRON.webp') }}">
-                                <img src="{{ asset('images/07_BESKIDZKA_DRON_thumb.webp') }}" alt="" loading="lazy" width="321" height="288"
-                                     class="w-100 h-100 object-fit-cover  rounded-2">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col" data-aos="fade">
-                        <div class="aspect-ratio-slide">
-                            <a class="glightbox" data-gallery="wiz" href="{{ asset('images/01_BESKIDZKA_TYŁ 1.webp') }}">
-                                <img src="{{ asset('images/01_BESKIDZKA_TYŁ 1_thumb.webp') }}" alt="" loading="lazy" width="321" height="288"
-                                     class="w-100 h-100 object-fit-cover  rounded-2">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col" data-aos="fade">
-                        <div class="aspect-ratio-slide">
-                            <a class="glightbox" data-gallery="wiz" href="{{ asset('images/05_BESKIDZKA_TYŁ 2.webp') }}">
-                                <img src="{{ asset('images/05_BESKIDZKA_TYŁ 2_thumb.webp') }}" alt="" loading="lazy" width="321" height="288"
-                                     class="w-100 h-100 object-fit-cover  rounded-2">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col" data-aos="fade">
-                        <div class="aspect-ratio-slide">
-                            <a class="glightbox" data-gallery="wiz" href="{{ asset('images/06_BESKIDZKA_TYŁ 3.webp') }}">
-                                <img src="{{ asset('images/06_BESKIDZKA_TYŁ 3_thumb.webp') }}" alt="" loading="lazy" width="321" height="288"
-                                     class="w-100 h-100 object-fit-cover  rounded-2">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col" data-aos="fade">
-                        <div class="aspect-ratio-slide">
-                            <a class="glightbox" data-gallery="wiz" href="{{ asset('images/02_BESKIDZKA_FRONT 1.webp') }}">
-                                <img src="{{ asset('images/02_BESKIDZKA_FRONT 1_thumb.webp') }}" alt="" loading="lazy" width="321" height="288"
-                                     class="w-100 h-100 object-fit-cover  rounded-2">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col" data-aos="fade">
-                        <div class="aspect-ratio-slide">
-                            <a class="glightbox" data-gallery="wiz" href="{{ asset('images/03_BESKIDZKA_FRONT 2.webp') }}">
-                                <img src="{{ asset('images/03_BESKIDZKA_FRONT 2_thumb.webp') }}" alt="" loading="lazy" width="321" height="288"
-                                     class="w-100 h-100 object-fit-cover  rounded-2">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col" data-aos="fade">
-                        <div class="aspect-ratio-slide">
-                            <a class="glightbox" data-gallery="wiz" href="{{ asset('images/04_BESKIDZKA_FRONT 3.webp') }}">
-                                <img src="{{ asset('images/04_BESKIDZKA_FRONT 3_thumb.webp') }}" alt="" loading="lazy" width="321" height="288"
-                                     class="w-100 h-100 object-fit-cover  rounded-2">
-                            </a>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </section>
-
-
 
         <section id="investContact">
             <div class="container">
